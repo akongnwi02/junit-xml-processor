@@ -1,0 +1,22 @@
+<?php
+
+    foreach (array(__DIR__ . '/../../autoload.php', __DIR__ . '/../vendor/autoload.php', __DIR__ . '/vendor/autoload.php') as $autoloader) {
+        if (file_exists($autoloader)) {
+            define('AUTOLOAD_FILE', $autoloader);
+            break;
+        }
+    }
+    unset($autoloader);
+
+    if(!defined('AUTOLOAD_FILE')) {
+        fwrite(
+            STDERR,
+            'The package is not installed as a composer dependency' . PHP_EOL
+        );
+        die(1);
+    }
+
+require AUTOLOAD_FILE;
+
+$result = \Mtownsend\XmlToArray\XmlToArray::convert(file_get_contents('report.xml'));
+print_r($result);

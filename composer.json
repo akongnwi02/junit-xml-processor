@@ -1,0 +1,34 @@
+{
+    "name": "devert/phpunit-reporter",
+    "description": "This is a package to process xml report of phpunit test executions",
+    "type": "library",
+    "keywords": [
+        "phpunit",
+        "xunit",
+        "testing",
+        "report",
+        "csv",
+        "xls"
+    ],
+    "bin": [
+        "report"
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^8.0"
+    },
+    "authors": [
+        {
+            "name": "Akongnwi Devert",
+            "email": "akongnwi02@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "mtownsend/xml-to-array": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Devert\\": "src/"
+        }
+    }
+}
