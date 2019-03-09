@@ -19,9 +19,9 @@ class TestFormatter{
      * @param array $data
      * @return array
      */
-    public function process(array $data) : array {
+    public static function process(array $data) : array {
         foreach($data as $testsuite){
-            $suite = strtoupper(str_replace('_', ' ', $testsuite['@attributes']['name']));
+            $suite = ucwords(str_replace('_', ' ', $testsuite['@attributes']['name']));
             foreach($testsuite['testcase'] as $testcase) {
                 if (isset($testcase['skipped'])) {
                     $status = self::SKIPPED;
@@ -32,13 +32,16 @@ class TestFormatter{
                 else {
                     $status = self::PASSED;
                 }
+                if($status == self::PASSED && $testcase['@attributes']['assertions'] ==0) {
+                    $status = self::SKIPPED;
+                }
                 $signature = $testcase['@attributes']['file'] .':'. $testcase['@attributes']['name'];
-                $subCategory = $this->subCategory($testcase['@attributes']['file']);
-                $category = $this->category($testcase['@attributes']['file']);
+                $subCategory = (new self)->subCategory($testcase['@attributes']['file']);
+                $category = (new self)->category($testcase['@attributes']['file']);
                 $case = ucfirst($testcase['@attributes']['feature']);
                 $time = $testcase['@attributes']['time'];
                 $assertions = $testcase['@attributes']['assertions'];
-                $tests[] = array(
+                $testcases[] = array(
                     'category' => $category,
                     'subCategory' => $subCategory,
                     'component' => $suite,
@@ -49,6 +52,10 @@ class TestFormatter{
                     'assertions' => $assertions
                 );
             }
+            $tests[] = array(
+                'suite' => $suite,
+                'testcases' => $testcases
+            );
         }
         return $tests;
     }

@@ -1,6 +1,0 @@
-project_code: MRA
-
-files:
-  xml: report.xml
-  csv: report.csv
-  xls: report.xls

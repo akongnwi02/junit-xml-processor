@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="bom" tests="4" assertions="1" errors="0" failures="1" skipped="2" time="0.006956">
+    <testcase file="/app/tests/bom/170_ReportService/AccessReportServiceCest.php" name="testReportUserCanAccessAndDownloadSubmissionReport" class="AccessReportServiceCest" feature="test report user can access and download submission report" assertions="0" time="0.000000">
+      <skipped/>
+    </testcase>
+    <testcase file="/app/tests/bom/170_ReportService/AccessReportServiceCest.php" name="testReportUserCanAccessAndDownloadPerformanceReport" class="AccessReportServiceCest" feature="test report user can access and download performance report" assertions="0" time="0.000038"/>
+    <testcase file="/app/tests/bom/170_ReportService/AccessReportServiceCest.php" name="testReportUserCanAccessAndDownloadPaymentReport" class="AccessReportServiceCest" feature="test report user can access and download payment report" assertions="0" time="0.000000">
+      <skipped/>
+    </testcase>
+    <testcase file="/app/tests/bom/170_ReportService/AccessReportServiceCest.php" name="testReportUserCanAccessAndDownloadProgressionReport" class="AccessReportServiceCest" feature="test report user can access and download progression report" assertions="1" time="0.006918">
+      <failure type="PHPUnit\Framework\ExpectationFailedException">AccessReportServiceCest: Test report user can access and download progression report
+Failed asserting that 2 matches expected 1.
+
+/app/tests/_support/_generated/BomTesterActions.php:42
+/app/tests/bom/170_ReportService/AccessReportServiceCest.php:27
+      </failure>
+    </testcase>
+  </testsuite>
+</testsuites>

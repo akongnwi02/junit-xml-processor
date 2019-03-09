@@ -33,7 +33,7 @@ class TestFormatterTest extends TestCase
                             'file' => '/app/tests/bom/170_ReportService/AccessReportServiceCest.php',
                             'name' => 'testReportUserCanAccessAndDownloadSubmissionReport',
                             'class' => 'AccessReportServiceCest',
-                            'feature' => 'test report user can access and download submission report',
+                            'feature' => 'test report.php user can access and download submission report.php',
                             'assertions' => 0,
                             'time' => 0.000000
                         ),
@@ -44,7 +44,7 @@ class TestFormatterTest extends TestCase
                             'file' => '/app/tests/bom/170_ReportService/AccessReportServiceCest.php',
                             'name' => 'testReportUserCanAccessAndDownloadPerformanceReport',
                             'class' => 'AccessReportServiceCest',
-                            'feature' => 'test report user can access and download performance report',
+                            'feature' => 'test report.php user can access and download performance report.php',
                             'assertions' => 0,
                             'time' => 0.000038
                         )
@@ -54,7 +54,7 @@ class TestFormatterTest extends TestCase
                             'file' => '/app/tests/bom/170_ReportService/AccessReportServiceCest.php',
                             'name' => 'testReportUserCanAccessAndDownloadPaymentReport',
                             'class' => 'AccessReportServiceCest',
-                            'feature' => 'test report user can access and download payment report',
+                            'feature' => 'test report.php user can access and download payment report.php',
                             'assertions' => 0,
                             'time' => 0.000000,
                         ),
@@ -65,12 +65,12 @@ class TestFormatterTest extends TestCase
                             'file' => '/app/tests/bom/170_ReportService/AccessReportServiceCest.php',
                             'name' => 'testReportUserCanAccessAndDownloadProgressionReport',
                             'class' => 'AccessReportServiceCest',
-                            'feature' => 'test report user can access and download progression report',
+                            'feature' => 'test report.php user can access and download progression report.php',
                             'assertions' => 1,
                             'time' => 0.006918
                         ),
                         'failure' => array(
-                            '@content' => 'AccessReportServiceCest: Test report user can access and download progression report
+                            '@content' => 'AccessReportServiceCest: Test report.php user can access and download progression report.php
 Failed asserting that 2 matches expected 1.
 
 /app/tests/_support/_generated/BomTesterActions.php:42
@@ -87,51 +87,55 @@ Failed asserting that 2 matches expected 1.
 
     public function testProcess()
     {
-        $attributeProcessor = new TestFormatter();
         $this->assertEquals(
             array(
                 array(
-                    'category' => 'Report Service',
-                    'subCategory' => 'Access Report Service',
-                    'component' => 'BOM',
-                    'signature' => '/app/tests/bom/170_ReportService/AccessReportServiceCest.php:testReportUserCanAccessAndDownloadSubmissionReport',
-                    'case' => 'Test report user can access and download submission report',
-                    'status' => 'SKIPPED',
-                    'time' => 0.000000,
-                    'assertions' => 0
-                ),
-                array(
-                    'category' => 'Report Service',
-                    'subCategory' => 'Access Report Service',
-                    'component' => 'BOM',
-                    'signature' => '/app/tests/bom/170_ReportService/AccessReportServiceCest.php:testReportUserCanAccessAndDownloadPerformanceReport',
-                    'case' => 'Test report user can access and download performance report',
-                    'status' => 'PASSED',
-                    'time' => 0.000038,
-                    'assertions' => 0
-                ),
-                array(
-                    'category' => 'Report Service',
-                    'subCategory' => 'Access Report Service',
-                    'component' => 'BOM',
-                    'signature' => '/app/tests/bom/170_ReportService/AccessReportServiceCest.php:testReportUserCanAccessAndDownloadPaymentReport',
-                    'case' => 'Test report user can access and download payment report',
-                    'status' => 'SKIPPED',
-                    'time' => 0.0,
-                    'assertions' => 0
-                ),
-                array(
-                    'category' => 'Report Service',
-                    'subCategory' => 'Access Report Service',
-                    'component' => 'BOM',
-                    'signature' => '/app/tests/bom/170_ReportService/AccessReportServiceCest.php:testReportUserCanAccessAndDownloadProgressionReport',
-                    'case' => 'Test report user can access and download progression report',
-                    'status' => 'FAILED',
-                    'time' => 0.006918,
-                    'assertions' => 1
+                    'suite' => 'Bom',
+                    'testcases' => array(
+                        array(
+                            'category' => 'Report Service',
+                            'subCategory' => 'Access Report Service',
+                            'component' => 'Bom',
+                            'signature' => '/app/tests/bom/170_ReportService/AccessReportServiceCest.php:testReportUserCanAccessAndDownloadSubmissionReport',
+                            'case' => 'Test report.php user can access and download submission report.php',
+                            'status' => 'SKIPPED',
+                            'time' => 0.000000,
+                            'assertions' => 0
+                        ),
+                        array(
+                            'category' => 'Report Service',
+                            'subCategory' => 'Access Report Service',
+                            'component' => 'Bom',
+                            'signature' => '/app/tests/bom/170_ReportService/AccessReportServiceCest.php:testReportUserCanAccessAndDownloadPerformanceReport',
+                            'case' => 'Test report.php user can access and download performance report.php',
+                            'status' => 'SKIPPED',
+                            'time' => 0.000038,
+                            'assertions' => 0
+                        ),
+                        array(
+                            'category' => 'Report Service',
+                            'subCategory' => 'Access Report Service',
+                            'component' => 'Bom',
+                            'signature' => '/app/tests/bom/170_ReportService/AccessReportServiceCest.php:testReportUserCanAccessAndDownloadPaymentReport',
+                            'case' => 'Test report.php user can access and download payment report.php',
+                            'status' => 'SKIPPED',
+                            'time' => 0.0,
+                            'assertions' => 0
+                        ),
+                        array(
+                            'category' => 'Report Service',
+                            'subCategory' => 'Access Report Service',
+                            'component' => 'Bom',
+                            'signature' => '/app/tests/bom/170_ReportService/AccessReportServiceCest.php:testReportUserCanAccessAndDownloadProgressionReport',
+                            'case' => 'Test report.php user can access and download progression report.php',
+                            'status' => 'FAILED',
+                            'time' => 0.006918,
+                            'assertions' => 1
+                        )
+                    )
                 )
             ),
-            $attributeProcessor->process($this->attributes)
+            TestFormatter::process($this->attributes)
         );
     }
 }

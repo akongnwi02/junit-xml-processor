@@ -4,7 +4,7 @@
     "type": "library",
     "keywords": [
         "phpunit",
-        "xunit",
+        "junit",
         "testing",
         "report",
         "csv",
@@ -24,7 +24,8 @@
     ],
     "require": {
         "php": ">=7.1",
-        "mtownsend/xml-to-array": "^1.0"
+        "phpoffice/phpspreadsheet": "^1.6",
+        "google/apiclient": "^2.0"
     },
     "autoload": {
         "psr-4": {
