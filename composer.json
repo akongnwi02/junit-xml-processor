@@ -1,14 +1,13 @@
 {
     "name": "devert/phpunit-reporter",
-    "description": "This is a package to process xml report of phpunit test executions",
+    "description": "This is a package to process xml report of junit or phpunit test executions and display the result on a google spreadsheet",
     "type": "library",
     "keywords": [
         "phpunit",
         "junit",
         "testing",
         "report",
-        "csv",
-        "xls"
+        "google spreadsheet"
     ],
     "bin": [
         "report"

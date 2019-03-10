@@ -1,0 +1,60 @@
+<?php
+
+require __DIR__ . '/vendor/autoload.php';
+
+if (php_sapi_name() != 'cli') {
+    throw new Exception('This application must be run on the command line.');
+}
+
+$options = getopt("f:");
+
+if(!array_key_exists('f', $options)){
+    throw new Exception('File parameter required. `report -f path\to\config _file`');
+};
+$config_file = $options['f'];
+if(!file_exists($config_file)) {
+    throw new Exception('File not found: '.$config_file);
+}
+
+$config = json_decode(file_get_contents($config_file));
+
+if (!property_exists($config, 'spreadsheetId')) {
+    throw new Exception('dpreadsheetId not set in configuration file');
+}
+
+if (!property_exists($config, 'google_credentials')) {
+    throw new Exception('google-credentials file path not set in configuration file');
+}
+
+if (!property_exists($config, 'xml')) {
+    throw new Exception('xml file path not set in configuration file');
+}
+
+$junitXmlPath = $config->xml;
+$spreadsheetId = $config->spreadsheetId;
+$google_credentials = $config->google_credentials;
+
+if (!file_exists($google_credentials)) {
+    throw new Exception('Google credentials file not found');
+}
+
+if (($junit_xml_data = file_get_contents($junitXmlPath))===false){
+    throw new Exception("Error fetching JUnit XML");
+} else {
+    libxml_use_internal_errors(true);
+    $formatted = Devert\Util\XmlToArray::convert($junit_xml_data);
+    if (!$formatted) {
+        echo "Error loading XML\n";
+        foreach(libxml_get_errors() as $error) {
+            echo "\t", $error->message;
+        }
+        exit(1);
+    } else {
+        $testcases = \Devert\Util\TestFormatter::process($formatted);
+    }
+}
+$googleSheet = new \Devert\Util\GoogleSheet($google_credentials);
+$googleSheet->updateSpreadSheet($spreadsheetId, $testcases);
+
+
+

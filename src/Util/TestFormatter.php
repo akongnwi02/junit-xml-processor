@@ -20,8 +20,9 @@ class TestFormatter{
      * @return array
      */
     public static function process(array $data) : array {
-        foreach($data as $testsuite){
+        foreach($data['testsuite'] as $testsuite){
             $suite = ucwords(str_replace('_', ' ', $testsuite['@attributes']['name']));
+
             foreach($testsuite['testcase'] as $testcase) {
                 if (isset($testcase['skipped'])) {
                     $status = self::SKIPPED;
@@ -56,6 +57,7 @@ class TestFormatter{
                 'suite' => $suite,
                 'testcases' => $testcases
             );
+            $testcases = [];
         }
         return $tests;
     }

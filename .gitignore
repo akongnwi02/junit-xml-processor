@@ -2,4 +2,6 @@ composer.phar
 /vendor/
 .phpunit.result.cache
 .report.xml
+.idea
+
 

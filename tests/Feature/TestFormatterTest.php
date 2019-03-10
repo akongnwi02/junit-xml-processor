@@ -18,6 +18,7 @@ class TestFormatterTest extends TestCase
     {
         $this->attributes = array(
             'testsuite' => array(
+                array(
                 '@attributes' => array(
                     'name' => 'bom',
                     'tests' => 4,
@@ -81,6 +82,7 @@ Failed asserting that 2 matches expected 1.
                         ),
                     )
                 )
+            )
             )
         );
     }

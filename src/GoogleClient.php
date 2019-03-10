@@ -14,6 +14,11 @@ use Google_Service_Sheets;
 
 class GoogleClient
 {
+    private $google_credentials;
+    public function __construct($google_credentials)
+    {
+        $this->google_credentials = $google_credentials;
+    }
 
     /**
      * Returns an authorized API client.
@@ -25,7 +30,7 @@ class GoogleClient
         $client = new Google_Client();
         $client->setApplicationName('Google Sheets API PHP Quickstart');
         $client->setScopes(Google_Service_Sheets::SPREADSHEETS);
-        $client->setAuthConfig('google-credentials.json');
+        $client->setAuthConfig($this->google_credentials);
 
         $client->setAccessType('offline');
         $client->setPrompt('select_account consent');

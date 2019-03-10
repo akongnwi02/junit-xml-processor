@@ -1,20 +1,608 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="bom" tests="4" assertions="1" errors="0" failures="1" skipped="2" time="0.006956">
+  <testsuite name="api_applicant_gateway" tests="69" assertions="236" errors="0" failures="3" skipped="3" time="56.673582">
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/110_Creation/ApplicantApplicationCloneCest.php" name="testApplicantCanCloneVisaApplication" class="ApplicantApplicationCloneCest" feature="test applicant can clone visa application" assertions="0" time="0.000000">
+      <skipped/>
+    </testcase>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/110_Creation/ApplicantApplicationCreationCest.php" name="testApplicantCanCreateVisaApplication" class="ApplicantApplicationCreationCest" feature="test applicant can create visa application" assertions="3" time="4.951268"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/110_Creation/ApplicantApplicationCreationCest.php" name="testApplicantCannotCompleteVisaApplicationInVoasThatDoesNotBelongToHim" class="ApplicantApplicationCreationCest" feature="test applicant cannot complete visa application in voas that does not belong to him" assertions="2" time="1.095689"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/110_Creation/ApplicantApplicationCreationCest.php" name="testApplicantCanCompleteVisaApplicationInVoas" class="ApplicantApplicationCreationCest" feature="test applicant can complete visa application in voas" assertions="3" time="0.555368"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/110_Creation/ApplicantApplicationCreationCest.php" name="testApplicantCanCreateVisaApplicationWithEmailAndIdProvidedByJwt" class="ApplicantApplicationCreationCest" feature="test applicant can create visa application with email and id provided by jwt" assertions="4" time="0.516175"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/110_Creation/ApplicantApplicationGetDetailsCest.php" name="testApplicantCanGetDetailsOfAnApplication" class="ApplicantApplicationGetDetailsCest" feature="test applicant can get details of an application" assertions="3" time="0.389718"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/110_Creation/ApplicantApplicationGetDetailsCest.php" name="testApplicantCannotGetDetailsOfAnApplicationThatDoesNotBelongToHim" class="ApplicantApplicationGetDetailsCest" feature="test applicant cannot get details of an application that does not belong to him" assertions="3" time="0.367015"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/110_Creation/ApplicantApplicationUpdateCest.php" name="testApplicantCanUpdateVisaApplication" class="ApplicantApplicationUpdateCest" feature="test applicant can update visa application" assertions="3" time="0.441785"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/110_Creation/ApplicantApplicationUpdateCest.php" name="testApplicantCannotUpdateVisaApplicationWhenStatusIsSubmitted" class="ApplicantApplicationUpdateCest" feature="test applicant cannot update visa application when status is submitted" assertions="3" time="0.428408"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/110_Creation/ApplicantApplicationUpdateCest.php" name="testApplicantCannotUpdateVisaApplicationWhenStatusIsCompleted" class="ApplicantApplicationUpdateCest" feature="test applicant cannot update visa application when status is completed" assertions="3" time="0.380445"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/110_Creation/ApplicantApplicationUpdateCest.php" name="testApplicantCannotUpdateVisaApplicationWhenStatusIsInProcessing" class="ApplicantApplicationUpdateCest" feature="test applicant cannot update visa application when status is in processing" assertions="3" time="0.366128"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/110_Creation/ApplicantApplicationUpdateCest.php" name="testApplicantCannotUpdateVisaApplicationWhenStatusIsAwaitingForApplicantFeedback" class="ApplicantApplicationUpdateCest" feature="test applicant cannot update visa application when status is awaiting for applicant feedback" assertions="3" time="0.537590"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/110_Creation/ApplicantApplicationUpdateCest.php" name="testApplicantCannotUpdateVisaApplicationWhenStatusIsReadyForProcessing" class="ApplicantApplicationUpdateCest" feature="test applicant cannot update visa application when status is ready for processing" assertions="3" time="0.367756"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/110_Creation/ApplicantApplicationsCountCest.php" name="testApplicantCanCountNumberOfApplications" class="ApplicantApplicationsCountCest" feature="test applicant can count number of applications" assertions="5" time="0.585488"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/110_Creation/ApplicantListAllApplicationsCest.php" name="testApplicantCanGetAllApplicationsThatBelongToHim" class="ApplicantListAllApplicationsCest" feature="test applicant can get all applications that belong to him" assertions="4" time="0.505989"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/120_Interaction/ApplicantRespondToFeedbackCest.php" name="testApplicantRespondToVisaApplication" class="ApplicantRespondToFeedbackCest" feature="test applicant respond to visa application" assertions="4" time="0.607594"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/130_MobileDeviceCompatibility/AndroidDeviceCest.php" name="testApplicantCanCreateVisaApplicationWithExactRequiredAndroidVersion" class="AndroidDeviceCest" feature="test applicant can create visa application with exact required android version" assertions="3" time="1.245859"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/130_MobileDeviceCompatibility/AndroidDeviceCest.php" name="testApplicantCanCreateVisaApplicationWithHigherAndroidVersion" class="AndroidDeviceCest" feature="test applicant can create visa application with higher android version" assertions="3" time="0.971778"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/130_MobileDeviceCompatibility/AndroidDeviceCest.php" name="testApplicantCannotCreateVisaApplicationWithLowerThanRequiredAndroidVersion" class="AndroidDeviceCest" feature="test applicant cannot create visa application with lower than required android version" assertions="3" time="0.746331"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/130_MobileDeviceCompatibility/IOSDeviceCest.php" name="testApplicantCanCreateVisaApplicationWithExactRequiredIOSVersion" class="IOSDeviceCest" feature="test applicant can create visa application with exact required ios version" assertions="3" time="0.802226"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/130_MobileDeviceCompatibility/IOSDeviceCest.php" name="testApplicantCanCreateVisaApplicationWithHigherIOSVersion" class="IOSDeviceCest" feature="test applicant can create visa application with higher ios version" assertions="3" time="0.791123"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/130_MobileDeviceCompatibility/IOSDeviceCest.php" name="testApplicantCannotCreateVisaApplicationWithLowerThanRequiredIOSVersion" class="IOSDeviceCest" feature="test applicant cannot create visa application with lower than required ios version" assertions="3" time="0.533837"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/140_VisApplicationFormConfiguration/VisaApplicationFormConfigurationCest.php" name="testApplicantCanGetVisaApplicationFormConfiguration" class="VisaApplicationFormConfigurationCest" feature="test applicant can get visa application form configuration" assertions="3" time="1.204693">
+      <failure type="PHPUnit\Framework\ExpectationFailedException">VisaApplicationFormConfigurationCest: Test applicant can get visa application form configuration
+Response JSON does not contain the provided JSON
+
+--- Expected
++++ Actual
+@@ @@
+-            'regex' =&gt; '/^[0-9A-Za-zàâçéèêëîïôûùüÿñæœäöüÄÖÜß .'\-#\/]+$/i'
++            'regex' =&gt; '/^[0-9A-Za-zàâçéèêëîïôûùüÿñæœäöüÄÖÜß ,.'\-#\/]+$/i'
+@@ @@
+-            'regex' =&gt; '/^[0-9A-Za-zàâçéèêëîïôûùüÿñæœäöüÄÖÜß .'\-#\/]+$/i'
++            'regex' =&gt; '/^[0-9A-Za-zàâçéèêëîïôûùüÿñæœäöüÄÖÜß ,.'\-#\/]+$/i'
+@@ @@
+-            'regex' =&gt; '/^[0-9A-Za-zàâçéèêëîïôûùüÿñæœäöüÄÖÜß .'\-#\/]+$/i'
++            'regex' =&gt; '/^[0-9A-Za-zàâçéèêëîïôûùüÿñæœäöüÄÖÜß ,.'\-#\/]+$/i'
+@@ @@
+-            'regex' =&gt; '/^[0-9A-Za-zàâçéèêëîïôûùüÿñæœäöüÄÖÜß .'\-#\/]+$/i'
++            'regex' =&gt; '/^[0-9A-Za-zàâçéèêëîïôûùüÿñæœäöüÄÖÜß ,.'\-#\/]+$/i'
+@@ @@
+-            'regex' =&gt; '/^[0-9A-Za-zàâçéèêëîïôûùüÿñæœäöüÄÖÜß .'\-#/]+$/i'
++            'regex' =&gt; '/^[0-9A-Za-zàâçéèêëîïôûùüÿñæœäöüÄÖÜß, .'\-#/]+$/i'
+@@ @@
+-            'regex' =&gt; '/^[0-9A-Za-zàâçéèêëîïôûùüÿñæœäöüÄÖÜß.' -#/]+$/i'
++            'regex' =&gt; '/^[0-9A-Za-zàâçéèêëîïôûùüÿñæœäöüÄÖÜß,.' -#/]+$/i'
+@@ @@
+-            'regex' =&gt; '/^[0-9A-Za-zàâçéèêëîïôûùüÿñæœäöüÄÖÜß.' -#/]+$/i'
++            'regex' =&gt; '/^[0-9A-Za-zàâçéèêëîïôûùüÿñæœäöüÄÖÜß,.' -#/]+$/i'
+@@ @@
+-            'regex' =&gt; '/^[0-9A-Za-zàâçéèêëîïôûùüÿñæœäöüÄÖÜß.' -#/]+$/i'
++            'regex' =&gt; '/^[0-9A-Za-zàâçéèêëîïôûùüÿñæœäöüÄÖÜß,.' -#/]+$/i'
+
+/app/tests/_support/_generated/Api_applicant_gatewayTesterActions.php:1207
+/app/tests/api_applicant_gateway/100_VisaApplication/140_VisApplicationFormConfiguration/VisaApplicationFormConfigurationCest.php:23
+</failure>
+    </testcase>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/150_DocumentUpload/ApplicantApplicationUploadDocumentCest.php" name="testApplicantCanUploadDocument" class="ApplicantApplicationUploadDocumentCest" feature="test applicant can upload document" assertions="4" time="1.911370"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/150_DocumentUpload/ApplicantApplicationUploadDocumentCest.php" name="testApplicantCannotUploadDocumentOnAVisaApplicationThatDoesNotBelongToHim" class="ApplicantApplicationUploadDocumentCest" feature="test applicant cannot upload document on a visa application that does not belong to him" assertions="3" time="0.565759"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/150_DocumentUpload/ApplicantApplicationUploadDocumentCest.php" name="testApplicantCannotUploadDocumentAboveACertainSize" class="ApplicantApplicationUploadDocumentCest" feature="test applicant cannot upload document above a certain size" assertions="3" time="0.974773"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/150_DocumentUpload/ApplicantApplicationUploadDocumentCest.php" name="testApplicantCannotUploadImageWithSizeGreaterThanOneMb" class="ApplicantApplicationUploadDocumentCest" feature="test applicant cannot upload image with size greater than one mb" assertions="3" time="0.764401"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/150_DocumentUpload/ApplicationApplicantUpdateAnUploadedDocumentCest.php" name="testApplicantCanUpdateAnUploadedDocument" class="ApplicationApplicantUpdateAnUploadedDocumentCest" feature="test applicant can update an uploaded document" assertions="6" time="0.793630"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/160_ReadPassportType/ReadAllPassportTypesCest.php" name="testApplicantCanReadAllPassportTypes" class="ReadAllPassportTypesCest" feature="test applicant can read all passport types" assertions="3" time="0.517977"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/160_ReadPassportType/ReadPassportTypeByUuidCest.php" name="testApplicantCanReadPassportTypeByUuid" class="ReadPassportTypeByUuidCest" feature="test applicant can read passport type by uuid" assertions="3" time="0.542256"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/160_ReadPassportType/ReadPassportTypeByUuidCest.php" name="testApplicantCannotReadPassportTypeWithWrongUuid" class="ReadPassportTypeByUuidCest" feature="test applicant cannot read passport type with wrong uuid" assertions="3" time="0.446977"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/170_VisaApplicationAcceptance/CompleteVisaApplicationProcessCest.php" name="testSuccessfulVisaApplication" class="CompleteVisaApplicationProcessCest" feature="test successful visa application" assertions="13" time="11.915334"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/170_VisaApplicationAcceptance/CompleteVisaApplicationProcessCest.php" name="testIfErrorRespectTheStandardFormatWhenPayingVisaApplicationWithoutAQuote" class="CompleteVisaApplicationProcessCest" feature="test if error respect the standard format when paying visa application without a quote" assertions="13" time="2.086713">
+      <failure type="PHPUnit\Framework\ExpectationFailedException">CompleteVisaApplicationProcessCest: Test if error respect the standard format when paying visa application without a quote
+Failed asserting that a NULL is not empty.
+
+/app/tests/_support/_generated/Api_applicant_gatewayTesterActions.php:302
+/app/tests/api_applicant_gateway/100_VisaApplication/170_VisaApplicationAcceptance/CompleteVisaApplicationProcessCest.php:80
+</failure>
+    </testcase>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/180_MetaData/IpAddressAndBrowserFingerPrintCest.php" name="testVoasStoresIpAdressAndBrowserFingerPrintInApplicationRecord" class="IpAddressAndBrowserFingerPrintCest" feature="test voas stores ip adress and browser finger print in application record" assertions="6" time="0.446667"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/190_AuditLog/PaymentAuditLogCest.php" name="testSuccessfulPaymentIsLogged" class="PaymentAuditLogCest" feature="test successful payment is logged" assertions="4" time="2.615476"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/190_AuditLog/PaymentAuditLogCest.php" name="testFailedPaymentIsLogged" class="PaymentAuditLogCest" feature="test failed payment is logged" assertions="4" time="1.464681"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/190_AuditLog/VisaApplicationAuditLogCest.php" name="testVisaApplicationCreatedIsAddedToAuditLog" class="VisaApplicationAuditLogCest" feature="test visa application created is added to audit log" assertions="4" time="2.387780"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/190_AuditLog/VisaApplicationAuditLogCest.php" name="testClonedVisaApplicationIsLogged" class="VisaApplicationAuditLogCest" feature="test cloned visa application is logged" assertions="0" time="0.000000">
+      <skipped/>
+    </testcase>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/190_AuditLog/VisaApplicationAuditLogCest.php" name="testResponseToFeedbackIsLogged" class="VisaApplicationAuditLogCest" feature="test response to feedback is logged" assertions="4" time="1.447067"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/190_AuditLog/VisaDocumentAuditLogCest.php" name="testCreatedDocumentIsLogged" class="VisaDocumentAuditLogCest" feature="test created document is logged" assertions="2" time="0.398150"/>
+    <testcase file="/app/tests/api_applicant_gateway/100_VisaApplication/190_AuditLog/VisaDocumentAuditLogCest.php" name="testUpdatedDocumentIsLogged" class="VisaDocumentAuditLogCest" feature="test updated document is logged" assertions="1" time="0.311816"/>
+    <testcase file="/app/tests/api_applicant_gateway/200_PaymentService/210_Payment/ApplicantFeePaymentCest.php" name="testApplicantCanReadPaymentTransaction" class="ApplicantFeePaymentCest" feature="test applicant can read payment transaction" assertions="2" time="0.654091"/>
+    <testcase file="/app/tests/api_applicant_gateway/200_PaymentService/210_Payment/ApplicantFeePaymentCest.php" name="testApplicantCanPayForVisaApplication" class="ApplicantFeePaymentCest" feature="test applicant can pay for visa application" assertions="3" time="0.508484"/>
+    <testcase file="/app/tests/api_applicant_gateway/200_PaymentService/210_Payment/ApplicantFeePaymentCest.php" name="testApplicantCanQuoteVisaApplicationFee" class="ApplicantFeePaymentCest" feature="test applicant can quote visa application fee" assertions="3" time="0.441166">
+      <failure type="PHPUnit\Framework\ExpectationFailedException">ApplicantFeePaymentCest: Test applicant can quote visa application fee
+Response JSON does not contain the provided JSON
+
+--- Expected
++++ Actual
+@@ @@
+-    'visatypeNameAltLangTwo' =&gt; null
++    'visatypeNameAltLangTwo' =&gt; 'Transit (1 - 3 Tage)'
+     'visatypeCode' =&gt; 'VISATRANS'
+-    'visatypeNameAltLangOne' =&gt; null
++    'visatypeNameAltLangOne' =&gt; 'Visa de Transit (1 à 3 jours)'
+@@ @@
++    'uuid' =&gt; '753f4461-f5d7-42ab-9f47-0f46d74c0ede'
++    'applicationIan' =&gt; 'string'
++    'createdAt' =&gt; '2019-02-15 16:13:42'
+
+/app/tests/_support/_generated/Api_applicant_gatewayTesterActions.php:1207
+/app/tests/api_applicant_gateway/200_PaymentService/210_Payment/ApplicantFeePaymentCest.php:221
+</failure>
+    </testcase>
+    <testcase file="/app/tests/api_applicant_gateway/200_PaymentService/210_Payment/ApplicantFeePaymentCest.php" name="testApplicantCannotQuoteFeeForVisaApplicationWithWrongApplicationId" class="ApplicantFeePaymentCest" feature="test applicant cannot quote fee for visa application with wrong application id" assertions="6" time="0.405522"/>
+    <testcase file="/app/tests/api_applicant_gateway/200_PaymentService/210_Payment/ApplicantFeePaymentCest.php" name="testVisaApplicationStatusChangesToCanceledWhenApplicationPaymentFails" class="ApplicantFeePaymentCest" feature="test visa application status changes to canceled when application payment fails" assertions="4" time="0.361850"/>
+    <testcase file="/app/tests/api_applicant_gateway/200_PaymentService/210_Payment/ApplicantFeePaymentCest.php" name="testVisaTypeIdAndVisaTypeCodeShouldMatchDuringQuote" class="ApplicantFeePaymentCest" feature="test visa type id and visa type code should match during quote" assertions="3" time="0.626244"/>
+    <testcase file="/app/tests/api_applicant_gateway/200_PaymentService/210_Payment/ApplicantFeePaymentCest.php" name="testCorrectValuesAreStoredInPaymentTransactionTableAfterPayingOfVisaFeeByApplicant" class="ApplicantFeePaymentCest" feature="test correct values are stored in payment transaction table after paying of visa fee by applicant" assertions="3" time="0.473741"/>
+    <testcase file="/app/tests/api_applicant_gateway/300_AuthenticationAndAuthorization/310_Registration/ActivateAccountCest.php" name="testApplicantCanActivateAccountThroughApi" class="ActivateAccountCest" feature="test applicant can activate account through api" assertions="3" time="0.213917"/>
+    <testcase file="/app/tests/api_applicant_gateway/300_AuthenticationAndAuthorization/310_Registration/ApplicantRegistrationCest.php" name="testApplicantCanRegisterSuccessfully" class="ApplicantRegistrationCest" feature="test applicant can register successfully" assertions="2" time="0.181297"/>
+    <testcase file="/app/tests/api_applicant_gateway/300_AuthenticationAndAuthorization/310_Registration/ApplicantRegistrationCest.php" name="testApplicantCannotRegisterSuccessfullyBecauseTheApplicantWithTheSameLoginAlreadyExists" class="ApplicantRegistrationCest" feature="test applicant cannot register successfully because the applicant with the same login already exists" assertions="3" time="0.223543"/>
+    <testcase file="/app/tests/api_applicant_gateway/300_AuthenticationAndAuthorization/310_Registration/ApplicantRegistrationCest.php" name="testApplicantCannotRegisterSuccessfullyBecauseTheApplicantWithTheSameEmailAddressAlreadyExists" class="ApplicantRegistrationCest" feature="test applicant cannot register successfully because the applicant with the same email address already exists" assertions="3" time="0.194869"/>
+    <testcase file="/app/tests/api_applicant_gateway/300_AuthenticationAndAuthorization/310_Registration/ApplicantRegistrationCest.php" name="testApplicantCannotRegisterSuccessfullyBecauseValidationError" class="ApplicantRegistrationCest" feature="test applicant cannot register successfully because validation error" assertions="4" time="0.215522"/>
+    <testcase file="/app/tests/api_applicant_gateway/300_AuthenticationAndAuthorization/310_Registration/ApplicantRegistrationTestsCest.php" name="testUserRegistry" class="ApplicantRegistrationTestsCest" feature="test user registry" assertions="1" time="0.159168"/>
+    <testcase file="/app/tests/api_applicant_gateway/300_AuthenticationAndAuthorization/310_Registration/ApplicantRegistrationTestsCest.php" name="testUserRegistryAndImmediateLogin" class="ApplicantRegistrationTestsCest" feature="test user registry and immediate login" assertions="5" time="0.603452"/>
+    <testcase file="/app/tests/api_applicant_gateway/300_AuthenticationAndAuthorization/310_Registration/RegistrationWithMobileDeviceCest.php" name="testApplicantCannotRegisterWithAndroidVersionLowerThanRequired" class="RegistrationWithMobileDeviceCest" feature="test applicant cannot register with android version lower than required" assertions="3" time="0.011828"/>
+    <testcase file="/app/tests/api_applicant_gateway/300_AuthenticationAndAuthorization/310_Registration/RegistrationWithMobileDeviceCest.php" name="testApplicantCanRegisterWithHigherAndroidVersion" class="RegistrationWithMobileDeviceCest" feature="test applicant can register with higher android version" assertions="3" time="0.268511"/>
+    <testcase file="/app/tests/api_applicant_gateway/300_AuthenticationAndAuthorization/310_Registration/RegistrationWithMobileDeviceCest.php" name="testApplicantCanRegisterWithExactAndroidVersion" class="RegistrationWithMobileDeviceCest" feature="test applicant can register with exact android version" assertions="3" time="0.209754"/>
+    <testcase file="/app/tests/api_applicant_gateway/300_AuthenticationAndAuthorization/310_Registration/RegistrationWithMobileDeviceCest.php" name="testApplicantCanRegisterWithExactIOSVersion" class="RegistrationWithMobileDeviceCest" feature="test applicant can register with exact ios version" assertions="3" time="0.201625"/>
+    <testcase file="/app/tests/api_applicant_gateway/300_AuthenticationAndAuthorization/310_Registration/RegistrationWithMobileDeviceCest.php" name="testApplicantCannotRegisterWithIOSVersionLowerThanRequired" class="RegistrationWithMobileDeviceCest" feature="test applicant cannot register with ios version lower than required" assertions="3" time="0.012544"/>
+    <testcase file="/app/tests/api_applicant_gateway/300_AuthenticationAndAuthorization/310_Registration/RegistrationWithMobileDeviceCest.php" name="testApplicantCanRegisterWithHigherIOSVersion" class="RegistrationWithMobileDeviceCest" feature="test applicant can register with higher ios version" assertions="3" time="0.219306"/>
+    <testcase file="/app/tests/api_applicant_gateway/300_AuthenticationAndAuthorization/320_PasswordReset/ResetApplicantPasswordCest.php" name="testApplicantCannotRequestResetPasswordWithNonExistingEmailAddress" class="ResetApplicantPasswordCest" feature="test applicant cannot request reset password with non existing email address" assertions="1" time="0.031922"/>
+    <testcase file="/app/tests/api_applicant_gateway/300_AuthenticationAndAuthorization/320_PasswordReset/ResetApplicantPasswordCest.php" name="testApplicantCanRequestResetPasswordSuccessFully" class="ResetApplicantPasswordCest" feature="test applicant can request reset password success fully" assertions="3" time="0.273604"/>
+    <testcase file="/app/tests/api_applicant_gateway/300_AuthenticationAndAuthorization/320_PasswordReset/ResetApplicantPasswordCest.php" name="testApplicantCannotResetPasswordDueToInvalidKey" class="ResetApplicantPasswordCest" feature="test applicant cannot reset password due to invalid key" assertions="3" time="0.291584"/>
+    <testcase file="/app/tests/api_applicant_gateway/300_AuthenticationAndAuthorization/320_PasswordReset/ResetApplicantPasswordCest.php" name="testApplicantResetPasswordSuccessfully" class="ResetApplicantPasswordCest" feature="test applicant reset password successfully" assertions="7" time="0.931599"/>
+    <testcase file="/app/tests/api_applicant_gateway/300_AuthenticationAndAuthorization/320_PasswordReset/ResetApplicantPasswordCest.php" name="testCorrectErrorMessageIsReturnedWhenApplicantTriesToResetPasswordWithWrongEmail" class="ResetApplicantPasswordCest" feature="test correct error message is returned when applicant tries to reset password with wrong email" assertions="0" time="0.000000">
+      <skipped/>
+    </testcase>
+    <testcase file="/app/tests/api_applicant_gateway/300_AuthenticationAndAuthorization/330_Login/ApplicantLoginCest.php" name="testUserLoginSuccess" class="ApplicantLoginCest" feature="test user login success" assertions="2" time="0.358878"/>
+    <testcase file="/app/tests/api_applicant_gateway/300_AuthenticationAndAuthorization/330_Login/ApplicantLoginCest.php" name="testUserLoginErrorUserDoesNotExist" class="ApplicantLoginCest" feature="test user login error user does not exist" assertions="4" time="0.192181"/>
+    <testcase file="/app/tests/api_applicant_gateway/300_AuthenticationAndAuthorization/330_Login/ApplicantLoginCest.php" name="testUserLoginErrorPasswordInvalid" class="ApplicantLoginCest" feature="test user login error password invalid" assertions="4" time="0.424289"/>
+  </testsuite>
+  <testsuite name="api_backoffice_gateway" tests="173" assertions="661" errors="2" failures="1" skipped="1" time="157.429791">
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/110_VisaApplication/IssuedVisaCest.php" name="testAdminCanGetAnIssuedVisa" class="IssuedVisaCest" feature="test admin can get an issued visa" assertions="3" time="4.738468"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/110_VisaApplication/IssuedVisaCest.php" name="testAdminCanCountIssuedVisas" class="IssuedVisaCest" feature="test admin can count issued visas" assertions="3" time="0.430439"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/110_VisaApplication/IssuedVisaCest.php" name="testAdminCanGetAllIssuedVisas" class="IssuedVisaCest" feature="test admin can get all issued visas" assertions="3" time="0.496941"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/110_VisaApplication/IssuedVisaCest.php" name="testFullNameOfAssignedVisaOfficerIsStoredInTheApplication" class="IssuedVisaCest" feature="test full name of assigned visa officer is stored in the application" assertions="5" time="1.105740"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/110_VisaApplication/VisaApplicationAssignmentsCest.php" name="testVisaOfficerCanUnassignHimselfFromVisaApplication" class="VisaApplicationAssignmentsCest" feature="test visa officer can unassign himself from visa application" assertions="4" time="0.596206"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/110_VisaApplication/VisaApplicationAssignmentsCest.php" name="testVisaOfficerCannotUnassignAnotherUserFromAVisaApplication" class="VisaApplicationAssignmentsCest" feature="test visa officer cannot unassign another user from a visa application" assertions="4" time="0.422904"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/110_VisaApplication/VisaApplicationAssignmentsCest.php" name="testAdminCanUnassignUserFromVisaApplication" class="VisaApplicationAssignmentsCest" feature="test admin can unassign user from visa application" assertions="4" time="0.465083"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/110_VisaApplication/VisaApplicationAssignmentsCest.php" name="testVisaOfficerCanAssignHimselfToVisaApplication" class="VisaApplicationAssignmentsCest" feature="test visa officer can assign himself to visa application" assertions="6" time="0.564817"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/110_VisaApplication/VisaApplicationCest.php" name="testVisaOfficerCanCountVisaApplications" class="VisaApplicationCest" feature="test visa officer can count visa applications" assertions="3" time="0.369138"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/110_VisaApplication/VisaApplicationCest.php" name="testVisaOfficerCanCommentOnAVisaApplication" class="VisaApplicationCest" feature="test visa officer can comment on a visa application" assertions="3" time="0.500239"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/110_VisaApplication/VisaApplicationCest.php" name="testVisaOfficerCanSeeCreatedByFullNameFieldInResponse" class="VisaApplicationCest" feature="test visa officer can see created by full name field in response" assertions="3" time="0.488654"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/110_VisaApplication/VisaApplicationCest.php" name="testVisaOfficerCanDeleteCommentOnAVisaApplication" class="VisaApplicationCest" feature="test visa officer can delete comment on a visa application" assertions="5" time="0.773625"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/110_VisaApplication/VisaApplicationCest.php" name="testVisaOfficerCanGetAllVisaApplications" class="VisaApplicationCest" feature="test visa officer can get all visa applications" assertions="3" time="0.449472"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/110_VisaApplication/VisaApplicationCest.php" name="testVisaOfficerCanGetAVisaApplication" class="VisaApplicationCest" feature="test visa officer can get a visa application" assertions="3" time="0.458787"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/110_VisaApplication/VisaApplicationCest.php" name="testVisaOfficerCanRejectVisaApplication" class="VisaApplicationCest" feature="test visa officer can reject visa application" assertions="3" time="1.626758"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/110_VisaApplication/VisaApplicationCest.php" name="testVisaOfficerCanApproveVisaApplication" class="VisaApplicationCest" feature="test visa officer can approve visa application" assertions="4" time="0.914805"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/110_VisaApplication/VisaApplicationCest.php" name="testVisaOfficerCanApproveVisaApplication2" class="VisaApplicationCest" feature="test visa officer can approve visa application2" assertions="4" time="1.098303"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/110_VisaApplication/VisaApplicationCest.php" name="testVisaOfficerCannotApproveVisaApplicationBecauseItIsNotInTheRightState" class="VisaApplicationCest" feature="test visa officer cannot approve visa application because it is not in the right state" assertions="4" time="1.053073"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/110_VisaApplication/VisaApplicationCest.php" name="testVisaOfficerCanRequestInfo" class="VisaApplicationCest" feature="test visa officer can request info" assertions="3" time="1.105942"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/110_VisaApplication/VisaApplicationCest.php" name="testBugProcessVisaApplicationTwice" class="VisaApplicationCest" feature="test bug process visa application twice" assertions="5" time="0.899079"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/110_VisaApplication/VisaApplicationCest.php" name="testVisaOfficerCanProcessVisaApplication" class="VisaApplicationCest" feature="test visa officer can process visa application" assertions="3" time="0.404525"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/110_VisaApplication/VisaApplicationCest.php" name="testApplicantSeeStatusAwaitingApplicantFeedbackWhenVisaOfficerRequestInformation" class="VisaApplicationCest" feature="test applicant see status awaiting applicant feedback when visa officer request information" assertions="4" time="0.407240"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/110_VisaApplication/VisaApplicationCest.php" name="testSendingMultipleMessagesToApplicant" class="VisaApplicationCest" feature="test sending multiple messages to applicant" assertions="0" time="0.000000"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/110_VisaApplication/VisaApplicationCest.php" name="testIssuedVisaEntityAfterApproval" class="VisaApplicationCest" feature="test issued visa entity after approval" assertions="3" time="0.577056"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/120_AuditLog/AuditLogCest.php" name="testAdminCanGetAllAuditLogs" class="AuditLogCest" feature="test admin can get all audit logs" assertions="3" time="0.470078"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/120_AuditLog/AuditLogCest.php" name="testAdminCanCountAuditLogs" class="AuditLogCest" feature="test admin can count audit logs" assertions="3" time="0.495504"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/120_AuditLog/AuditLogCest.php" name="testAdminCanGetAnAuditLog" class="AuditLogCest" feature="test admin can get an audit log" assertions="3" time="0.421548"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/120_AuditLog/BackendUserAuditLogCest.php" name="testBackendUserCreatedIsLogged" class="BackendUserAuditLogCest" feature="test backend user created is logged" assertions="12" time="1.647731"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/120_AuditLog/BackendUserAuditLogCest.php" name="testBackendUserUpdatedIsLogged" class="BackendUserAuditLogCest" feature="test backend user updated is logged" assertions="12" time="1.658525"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/120_AuditLog/BackendUserAuditLogCest.php" name="testBackendUserDeletedIsLogged" class="BackendUserAuditLogCest" feature="test backend user deleted is logged" assertions="12" time="1.462778"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/120_AuditLog/RejectionReasonAuditLogCest.php" name="testRejectionReasonCreatedIsLogged" class="RejectionReasonAuditLogCest" feature="test rejection reason created is logged" assertions="4" time="1.559086"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/120_AuditLog/RejectionReasonAuditLogCest.php" name="testRejectionReasonUpdatedIsLogged" class="RejectionReasonAuditLogCest" feature="test rejection reason updated is logged" assertions="4" time="1.438085"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/120_AuditLog/RejectionReasonAuditLogCest.php" name="testRejectionReasonDeletedIsLogged" class="RejectionReasonAuditLogCest" feature="test rejection reason deleted is logged" assertions="12" time="1.407322"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/120_AuditLog/UserAssignmentAuditLogCest.php" name="testUserAssignmentCreatedIsLogged" class="UserAssignmentAuditLogCest" feature="test user assignment created is logged" assertions="4" time="2.095152"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/120_AuditLog/UserAssignmentAuditLogCest.php" name="testUserAssignmentUpdatedIsLogged" class="UserAssignmentAuditLogCest" feature="test user assignment updated is logged" assertions="4" time="1.577859"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/120_AuditLog/UserAssignmentAuditLogCest.php" name="testUserAssignmentDeletedIsLogged" class="UserAssignmentAuditLogCest" feature="test user assignment deleted is logged" assertions="16" time="1.593218"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/120_AuditLog/VisaApplicationAuditLogVisCest.php" name="testApprovedVisaApplicationsAreLogged" class="VisaApplicationAuditLogVisCest" feature="test approved visa applications are logged" assertions="4" time="2.755830"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/120_AuditLog/VisaApplicationAuditLogVisCest.php" name="testRejectedVisaApplicationAreLogged" class="VisaApplicationAuditLogVisCest" feature="test rejected visa application are logged" assertions="4" time="2.517856"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/120_AuditLog/VisaApplicationAuditLogVisCest.php" name="testRequestInfoOnVisaApplicationIsLogged" class="VisaApplicationAuditLogVisCest" feature="test request info on visa application is logged" assertions="4" time="2.475915"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/120_AuditLog/VisaApplicationAuditLogVisCest.php" name="testEmailVisaApplicationIsLogged" class="VisaApplicationAuditLogVisCest" feature="test email visa application is logged" assertions="0" time="0.000000">
+      <skipped/>
+    </testcase>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/120_AuditLog/VisaApplicationAuditLogVisCest.php" name="testVisaInternalCommentCreatedIsLogged" class="VisaApplicationAuditLogVisCest" feature="test visa internal comment created is logged" assertions="4" time="1.385089"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/120_AuditLog/VisaApplicationAuditLogVisCest.php" name="testVisaInternalCommentDeletedIsLogged" class="VisaApplicationAuditLogVisCest" feature="test visa internal comment deleted is logged" assertions="5" time="1.489773"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/130_AssignmentManagement/AuthorityCest.php" name="testAdminCanGetAllAuthorities" class="AuthorityCest" feature="test admin can get all authorities" assertions="3" time="0.434581"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/130_AssignmentManagement/AuthorityCest.php" name="testAdminCanGetAuthority" class="AuthorityCest" feature="test admin can get authority" assertions="3" time="0.414503"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/130_AssignmentManagement/AuthorityCest.php" name="testAdminCanUpdateAuthority" class="AuthorityCest" feature="test admin can update authority" assertions="3" time="0.413850"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/130_AssignmentManagement/AuthorityCest.php" name="testAdminCanDeleteAuthority" class="AuthorityCest" feature="test admin can delete authority" assertions="2" time="0.656440"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/130_AssignmentManagement/AuthorityCest.php" name="testAdminCanCountAllAuthorities" class="AuthorityCest" feature="test admin can count all authorities" assertions="3" time="0.383539"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/130_AssignmentManagement/AuthorityCest.php" name="testAdminCanCreateAuthority" class="AuthorityCest" feature="test admin can create authority" assertions="3" time="0.362120"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/130_AssignmentManagement/UserAssignmentCest.php" name="testAdminCanGetAllUserAssignments" class="UserAssignmentCest" feature="test admin can get all user assignments" assertions="3" time="0.543710"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/130_AssignmentManagement/UserAssignmentCest.php" name="testAdminCanCountUserAssignments" class="UserAssignmentCest" feature="test admin can count user assignments" assertions="3" time="0.423560"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/130_AssignmentManagement/UserAssignmentCest.php" name="testAdminCanGetAUserAssignment" class="UserAssignmentCest" feature="test admin can get a user assignment" assertions="3" time="0.466799"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/130_AssignmentManagement/UserAssignmentCest.php" name="testAdminCanCreateUserAssignment" class="UserAssignmentCest" feature="test admin can create user assignment" assertions="3" time="0.673377"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/130_AssignmentManagement/UserAssignmentCest.php" name="testAdminCanUpdateUserAssignment" class="UserAssignmentCest" feature="test admin can update user assignment" assertions="3" time="0.417933"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/130_AssignmentManagement/UserAssignmentCest.php" name="testAdminCanDeleteUserAssignment" class="UserAssignmentCest" feature="test admin can delete user assignment" assertions="0" time="0.000000"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/130_AssignmentManagement/UserAssignmentCest.php" name="testDeletedUserAssignmentsAreNotCounted" class="UserAssignmentCest" feature="test deleted user assignments are not counted" assertions="4" time="0.500362"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/130_AssignmentManagement/UserAssignmentCest.php" name="testUserAssignmentCannotBeDuplicated" class="UserAssignmentCest" feature="test user assignment cannot be duplicated" assertions="4" time="0.832576"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/130_AssignmentManagement/UserRoleCest.php" name="testAdminCanCountAllUserRoles" class="UserRoleCest" feature="test admin can count all user roles" assertions="3" time="0.402862"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/130_AssignmentManagement/UserRoleCest.php" name="testAdminCanGetAUserRole" class="UserRoleCest" feature="test admin can get a user role" assertions="3" time="0.402568"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/130_AssignmentManagement/UserRoleCest.php" name="testAdminCanGetAllUserRoles" class="UserRoleCest" feature="test admin can get all user roles" assertions="3" time="0.402486"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/140_SystemConfiguration/ConfigurationSettingCest.php" name="testAdminCanUpdateConfigurationSetting" class="ConfigurationSettingCest" feature="test admin can update configuration setting" assertions="3" time="0.412953"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/140_SystemConfiguration/ConfigurationSettingCest.php" name="testAdminCanGetAConfigurationSetting" class="ConfigurationSettingCest" feature="test admin can get a configuration setting" assertions="3" time="0.354922"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/140_SystemConfiguration/ConfigurationSettingCest.php" name="testAdminCanGetAllConfigurationSettings" class="ConfigurationSettingCest" feature="test admin can get all configuration settings" assertions="3" time="0.420780"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/140_SystemConfiguration/ConfigurationSettingCest.php" name="testAdminCanCountAllConfigurationSettings" class="ConfigurationSettingCest" feature="test admin can count all configuration settings" assertions="3" time="0.553132"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/140_SystemConfiguration/CountryCest.php" name="testAdminCanCountCountries" class="CountryCest" feature="test admin can count countries" assertions="3" time="0.421851"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/140_SystemConfiguration/CountryCest.php" name="testAdminCanGetAllCountries" class="CountryCest" feature="test admin can get all countries" assertions="3" time="0.403463"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/140_SystemConfiguration/CountryCest.php" name="testAdminCanGetCountry" class="CountryCest" feature="test admin can get country" assertions="3" time="0.448260"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/140_SystemConfiguration/RejectionReasonCest.php" name="testAdminCanCreateRejectionReason" class="RejectionReasonCest" feature="test admin can create rejection reason" assertions="3" time="0.381714"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/140_SystemConfiguration/RejectionReasonCest.php" name="testAdminCanCountRejectionReasons" class="RejectionReasonCest" feature="test admin can count rejection reasons" assertions="3" time="0.537553"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/140_SystemConfiguration/RejectionReasonCest.php" name="testAdminCanDeleteRejectionReason" class="RejectionReasonCest" feature="test admin can delete rejection reason" assertions="2" time="0.365376"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/140_SystemConfiguration/RejectionReasonCest.php" name="testAdminCanUpdateARejectionReason" class="RejectionReasonCest" feature="test admin can update a rejection reason" assertions="3" time="0.354561"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/140_SystemConfiguration/RejectionReasonCest.php" name="testAdminCanGetRejectionReason" class="RejectionReasonCest" feature="test admin can get rejection reason" assertions="3" time="0.342067"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/140_SystemConfiguration/RejectionReasonCest.php" name="testAdminCanGetAllRejectionReasons" class="RejectionReasonCest" feature="test admin can get all rejection reasons" assertions="3" time="0.406594"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/140_SystemConfiguration/RejectionReasonCest.php" name="testDeletedRejectionReasonsAreNotCounted" class="RejectionReasonCest" feature="test deleted rejection reasons are not counted" assertions="4" time="0.554316"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/140_SystemConfiguration/RejectionReasonCest.php" name="testRejectionReasonCodeIsUnique" class="RejectionReasonCest" feature="test rejection reason code is unique" assertions="4" time="0.409807"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/150_TravelerEntry/TravelerEntryCest.php" name="testAdminCanGetAllTravelerEntries" class="TravelerEntryCest" feature="test admin can get all traveler entries" assertions="3" time="0.695850"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/150_TravelerEntry/TravelerEntryCest.php" name="testAdminCanGetATravelerEntry" class="TravelerEntryCest" feature="test admin can get a traveler entry" assertions="3" time="0.401006"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/150_TravelerEntry/TravelerEntryCest.php" name="testAdminCanCountTravelerEntries" class="TravelerEntryCest" feature="test admin can count traveler entries" assertions="3" time="0.397473"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/150_TravelerEntry/TravelerEntryCest.php" name="testAdminCanDeleteTravelerEntry" class="TravelerEntryCest" feature="test admin can delete traveler entry" assertions="2" time="0.414246"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/150_TravelerEntry/TravelerEntryCest.php" name="testAdminCanCreateTravelerEntry" class="TravelerEntryCest" feature="test admin can create traveler entry" assertions="3" time="0.401139"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/180_EmailManagement/ManageEmailForVisaApplicationCest.php" name="testProperMailAfterApprovingVisaApplication" class="ManageEmailForVisaApplicationCest" feature="test proper mail after approving visa application" assertions="9" time="10.543518"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/180_EmailManagement/ManageEmailForVisaApplicationCest.php" name="testProperMailAfterRejectingVisaApplication" class="ManageEmailForVisaApplicationCest" feature="test proper mail after rejecting visa application" assertions="6" time="10.599200"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/180_EmailManagement/ManageEmailForVisaApplicationCest.php" name="testProperMailWhenVisaOfficerRequestForAdditionalInformation" class="ManageEmailForVisaApplicationCest" feature="test proper mail when visa officer request for additional information" assertions="5" time="10.579862"/>
+    <testcase file="/app/tests/api_backoffice_gateway/100_VisaService/300_AccessUploadedDocuments/VisaServiceServeUploadedDocumentsCest.php" name="testVisCanReadDocumentUploadedByApplicant" class="visaServiceServeUploadedDocumentsCest" feature="test vis can read document uploaded by applicant" assertions="5" time="1.610221"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/CountriesListInSortedOrderCest.php" name="testCountriesListIsSorted" class="CountriesListInSortedOrderCest" feature="test countries list is sorted" assertions="3" time="0.398752"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/CountryCest.php" name="testAdminCanCountCountriesInVoas" class="Voas\CountryCest" feature="test admin can count countries in voas" assertions="3" time="0.344197"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/CountryCest.php" name="testAdminCanGetAllCountriesInVoas" class="Voas\CountryCest" feature="test admin can get all countries in voas" assertions="3" time="0.343041"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/CountryCest.php" name="testAdminCanGetCountryinVoas" class="Voas\CountryCest" feature="test admin can get countryin voas" assertions="3" time="0.314845"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/DocumentTypeCest.php" name="testAdminCanGetAllDocumentTypesInVoas" class="DocumentTypeCest" feature="test admin can get all document types in voas" assertions="3" time="0.368685"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/DocumentTypeCest.php" name="testAdminCanGetADocumentTypeInVoas" class="DocumentTypeCest" feature="test admin can get a document type in voas" assertions="3" time="0.326656"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/DocumentTypeCest.php" name="testAdminCanCountDocumentTypesInVoas" class="DocumentTypeCest" feature="test admin can count document types in voas" assertions="3" time="0.324064"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/DocumentTypeCest.php" name="testAdminCanDeleteDocumentTypeInVoas" class="DocumentTypeCest" feature="test admin can delete document type in voas" assertions="3" time="0.395473"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/DocumentTypeCest.php" name="testAdminCannotDeleteAnNonExistingDocumentTypeInVoasAndGetErrorInStandardFormat" class="DocumentTypeCest" feature="test admin cannot delete an non existing document type in voas and get error in standard format" assertions="5" time="0.444114"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/DocumentTypeCest.php" name="testAdminCanUpdateDocumentTypeInVoas" class="DocumentTypeCest" feature="test admin can update document type in voas" assertions="3" time="0.401299"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/DocumentTypeCest.php" name="testAdminCanCreateDocumentTypeInVoas" class="DocumentTypeCest" feature="test admin can create document type in voas" assertions="3" time="0.360772"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/FileCest.php" name="testFileNotFoundInVoas" class="FileCest" feature="test file not found in voas" assertions="2" time="0.423074"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/OccupationCest.php" name="testAdminCanCountAllOccupationsInVoas" class="OccupationCest" feature="test admin can count all occupations in voas" assertions="3" time="0.327684"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/OccupationCest.php" name="testAdminCanGetAllOccupationsInVoas" class="OccupationCest" feature="test admin can get all occupations in voas" assertions="3" time="0.365322"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/OccupationCest.php" name="testAdminCanGetAnOccupationInVoas" class="OccupationCest" feature="test admin can get an occupation in voas" assertions="3" time="0.335700"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/OccupationCest.php" name="testAdminCanDeleteAnOccupationInVoas" class="OccupationCest" feature="test admin can delete an occupation in voas" assertions="3" time="0.395585"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/OccupationCest.php" name="testAdminCannotDeleteAnOccupationInVoasAndGetErrorInStandardFormat" class="OccupationCest" feature="test admin cannot delete an occupation in voas and get error in standard format" assertions="5" time="0.326876"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/OccupationCest.php" name="testAdminCanUpdateOccupationInVoas" class="OccupationCest" feature="test admin can update occupation in voas" assertions="3" time="0.409651"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/OccupationCest.php" name="testAdminCanCreateOccupationInVoas" class="OccupationCest" feature="test admin can create occupation in voas" assertions="3" time="0.337255"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/OccupationCest.php" name="testDeletedOccupationsAreNotCounted" class="OccupationCest" feature="test deleted occupations are not counted" assertions="4" time="0.416330"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/PassportTypeCest.php" name="testAdminCanCountAllPassportTypesInVoas" class="PassportTypeCest" feature="test admin can count all passport types in voas" assertions="3" time="0.345591"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/PassportTypeCest.php" name="testAdminCanGetAllPassportTypesInVoas" class="PassportTypeCest" feature="test admin can get all passport types in voas" assertions="3" time="0.330794"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/PassportTypeCest.php" name="testAdminCanGetAPassportTypeInVoas" class="PassportTypeCest" feature="test admin can get a passport type in voas" assertions="3" time="0.339206"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/PassportTypeCest.php" name="testAdminCanDeleteAPassportTypeInVoas" class="PassportTypeCest" feature="test admin can delete a passport type in voas" assertions="3" time="0.375632"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/PassportTypeCest.php" name="testAdminCannnotDeleteAPassportTypeInVoasAndGetErrorInStandardFormat" class="PassportTypeCest" feature="test admin cannnot delete a passport type in voas and get error in standard format" assertions="5" time="0.343692"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/PassportTypeCest.php" name="testAdminCanUpdateAPassportTypeInVoas" class="PassportTypeCest" feature="test admin can update a passport type in voas" assertions="3" time="0.440953"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/PassportTypeCest.php" name="testAdminCanCreateAPassportTypeInVoas" class="PassportTypeCest" feature="test admin can create a passport type in voas" assertions="3" time="0.408221"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/VisaConfigurationCest.php" name="testSuperAdminCanGetVisaConfigurationsInVoas" class="VisaConfigurationCest" feature="test super admin can get visa configurations in voas" assertions="3" time="0.517768">
+      <failure type="PHPUnit\Framework\ExpectationFailedException">VisaConfigurationCest: Test super admin can get visa configurations in voas
+Response JSON does not contain the provided JSON
+
+--- Expected
++++ Actual
+@@ @@
+-            'regex' =&gt; '/^[0-9A-Za-zàâçéèêëîïôûùüÿñæœäöüÄÖÜß .'\-#\/]+$/i'
++            'regex' =&gt; '/^[0-9A-Za-zàâçéèêëîïôûùüÿñæœäöüÄÖÜß ,.'\-#\/]+$/i'
+@@ @@
+-            'regex' =&gt; '/^[0-9A-Za-zàâçéèêëîïôûùüÿñæœäöüÄÖÜß .'\-#\/]+$/i'
++            'regex' =&gt; '/^[0-9A-Za-zàâçéèêëîïôûùüÿñæœäöüÄÖÜß ,.'\-#\/]+$/i'
+@@ @@
+-            'regex' =&gt; '/^[0-9A-Za-zàâçéèêëîïôûùüÿñæœäöüÄÖÜß .'\-#\/]+$/i'
++            'regex' =&gt; '/^[0-9A-Za-zàâçéèêëîïôûùüÿñæœäöüÄÖÜß ,.'\-#\/]+$/i'
+@@ @@
+-            'regex' =&gt; '/^[0-9A-Za-zàâçéèêëîïôûùüÿñæœäöüÄÖÜß .'\-#\/]+$/i'
++            'regex' =&gt; '/^[0-9A-Za-zàâçéèêëîïôûùüÿñæœäöüÄÖÜß ,.'\-#\/]+$/i'
+@@ @@
+-            'regex' =&gt; '/^[0-9A-Za-zàâçéèêëîïôûùüÿñæœäöüÄÖÜß .'\-#/]+$/i'
++            'regex' =&gt; '/^[0-9A-Za-zàâçéèêëîïôûùüÿñæœäöüÄÖÜß, .'\-#/]+$/i'
+@@ @@
+-            'regex' =&gt; '/^[0-9A-Za-zàâçéèêëîïôûùüÿñæœäöüÄÖÜß.' -#/]+$/i'
++            'regex' =&gt; '/^[0-9A-Za-zàâçéèêëîïôûùüÿñæœäöüÄÖÜß,.' -#/]+$/i'
+@@ @@
+-            'regex' =&gt; '/^[0-9A-Za-zàâçéèêëîïôûùüÿñæœäöüÄÖÜß.' -#/]+$/i'
++            'regex' =&gt; '/^[0-9A-Za-zàâçéèêëîïôûùüÿñæœäöüÄÖÜß,.' -#/]+$/i'
+@@ @@
+-            'regex' =&gt; '/^[0-9A-Za-zàâçéèêëîïôûùüÿñæœäöüÄÖÜß.' -#/]+$/i'
++            'regex' =&gt; '/^[0-9A-Za-zàâçéèêëîïôûùüÿñæœäöüÄÖÜß,.' -#/]+$/i'
+
+/app/tests/_support/_generated/Api_backoffice_gatewayTesterActions.php:1207
+/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/VisaConfigurationCest.php:28
+</failure>
+    </testcase>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/VisaFeeCest.php" name="testAdminCanCountAllVisaFeesInVoas" class="VisaFeeCest" feature="test admin can count all visa fees in voas" assertions="3" time="0.368879"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/VisaFeeCest.php" name="testAdminCanGetAllVisaFeesInVoas" class="VisaFeeCest" feature="test admin can get all visa fees in voas" assertions="3" time="0.462589"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/VisaFeeCest.php" name="testAdminCanGetVisaFeeInVoas" class="VisaFeeCest" feature="test admin can get visa fee in voas" assertions="3" time="0.353747"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/VisaFeeCest.php" name="testAdminCanDeleteAVisaFeeInVoas" class="VisaFeeCest" feature="test admin can delete a visa fee in voas" assertions="3" time="0.429702"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/VisaFeeCest.php" name="testAdminCannotDeleteAVisaFeeInVoasAndGetErrorInStandardFormat" class="VisaFeeCest" feature="test admin cannot delete a visa fee in voas and get error in standard format" assertions="5" time="0.342219"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/VisaFeeCest.php" name="testAdminCanUpdateAVisaFeeInVoas" class="VisaFeeCest" feature="test admin can update a visa fee in voas" assertions="3" time="0.477929"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/VisaFeeCest.php" name="testAdminCanCreateAVisaFeeInVoas" class="VisaFeeCest" feature="test admin can create a visa fee in voas" assertions="3" time="0.366451"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/VisaFeeCest.php" name="testDeletedVisaFeesAreNotCounted" class="VisaFeeCest" feature="test deleted visa fees are not counted" assertions="4" time="0.452012"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/VisaPurposeCest.php" name="testAdminCanGetAllVisaPurposesInVoas" class="VisaPurposeCest" feature="test admin can get all visa purposes in voas" assertions="3" time="0.561750"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/VisaPurposeCest.php" name="testAdminCanGetAVisaPurposesInVoas" class="VisaPurposeCest" feature="test admin can get a visa purposes in voas" assertions="3" time="0.376239"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/VisaPurposeCest.php" name="testAdminCanCountVisaPurposesInVoas" class="VisaPurposeCest" feature="test admin can count visa purposes in voas" assertions="3" time="0.391795"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/VisaPurposeCest.php" name="testAdminCanDeleteVisaPurposeInVoas" class="VisaPurposeCest" feature="test admin can delete visa purpose in voas" assertions="3" time="0.452834"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/VisaPurposeCest.php" name="testAdminCannotDeleteVisaPurposeInVoasAndGetErrorInStandardFormat" class="VisaPurposeCest" feature="test admin cannot delete visa purpose in voas and get error in standard format" assertions="5" time="0.416886"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/VisaPurposeCest.php" name="testAdminCanUpdateVisaPurposeInVoas" class="VisaPurposeCest" feature="test admin can update visa purpose in voas" assertions="3" time="0.432050"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/VisaPurposeCest.php" name="testAdminCanCreateVisaPurposeInVoas" class="VisaPurposeCest" feature="test admin can create visa purpose in voas" assertions="3" time="0.440345"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/VisaPurposeCest.php" name="testDeletedVisaPurposesAreNotCounted" class="VisaPurposeCest" feature="test deleted visa purposes are not counted" assertions="4" time="0.408247"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/VisaPurposeCest.php" name="testDeletedVisaPurposesAreNotReturnedInResponse" class="VisaPurposeCest" feature="test deleted visa purposes are not returned in response" assertions="4" time="0.740203"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/VisaTypeCest.php" name="testAdminCanGetAllVisaTypesInVoas" class="VisaTypeCest" feature="test admin can get all visa types in voas" assertions="3" time="0.492685"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/VisaTypeCest.php" name="testAdminCanGetAVisaTypeInVoas" class="VisaTypeCest" feature="test admin can get a visa type in voas" assertions="3" time="0.368086"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/VisaTypeCest.php" name="testAdminCanCountVisaTypesInVoas" class="VisaTypeCest" feature="test admin can count visa types in voas" assertions="3" time="0.421668"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/VisaTypeCest.php" name="testAdminCanDeleteVisaTypeInVoas" class="VisaTypeCest" feature="test admin can delete visa type in voas" assertions="3" time="0.495288"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/VisaTypeCest.php" name="testAdminCannotDeleteVisaTypeInVoasAndGetErrorInStandardFormat" class="VisaTypeCest" feature="test admin cannot delete visa type in voas and get error in standard format" assertions="5" time="0.325790"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/VisaTypeCest.php" name="testAdminCanUpdateVisaTypeInVoas" class="VisaTypeCest" feature="test admin can update visa type in voas" assertions="3" time="0.434730"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/VisaTypeCest.php" name="testAdminCanCreateVisaTypeInVoas" class="VisaTypeCest" feature="test admin can create visa type in voas" assertions="3" time="0.394177"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/VisaTypeCest.php" name="testDeletedVisaTypesAreNotCounted" class="VisaTypeCest" feature="test deleted visa types are not counted" assertions="4" time="0.417593"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/VisaTypeCest.php" name="testActivatingVisaTypeWithoutValidVisaFeeReturnsError" class="VisaTypeCest" feature="test activating visa type without valid visa fee returns error" assertions="4" time="0.430000"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/210_SystemConfiguration/VisaTypeCest.php" name="testUpdatingVisaTypeWithoutValidFeeWhenNotTryingToActivateReturnsSuccess" class="VisaTypeCest" feature="test updating visa type without valid fee when not trying to activate returns success" assertions="4" time="0.471179"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/220_VisaApplication/ChangeStatusCest.php" name="testChangeStatusOfAnApplicationWithWrongStatus" class="ChangeStatusCest" feature="test change status of an application with wrong status" assertions="3" time="0.426160"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/220_VisaApplication/ChangeStatusCest.php" name="testVoasOffersEndpointForPtsToUpdatePaymentStatus" class="ChangeStatusCest" feature="test voas offers endpoint for pts to update payment status" assertions="3" time="0.476236"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/220_VisaApplication/ChangeStatusCest.php" name="testPtsCannotUpdatePaymentStatusForAnApplicationWhichDoesNotExist" class="ChangeStatusCest" feature="test pts cannot update payment status for an application which does not exist" assertions="3" time="0.387489"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/220_VisaApplication/ProcessVisaApplicationCest.php" name="testAdminCanUpdateVisaApplicationStatusInVoas" class="ProcessVisaApplicationCest" feature="test admin can update visa application status in voas" assertions="3" time="0.419968"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/230_AuditLog/DocumentTypeAuditLogCest.php" name="testDocumentTypeCreatedIsLogged" class="DocumentTypeAuditLogCest" feature="test document type created is logged" assertions="4" time="2.336726"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/230_AuditLog/DocumentTypeAuditLogCest.php" name="testDocumentTypeUpdatedIsLogged" class="DocumentTypeAuditLogCest" feature="test document type updated is logged" assertions="4" time="2.344665"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/230_AuditLog/DocumentTypeAuditLogCest.php" name="testDocumentTypeDeletedIsLogged" class="DocumentTypeAuditLogCest" feature="test document type deleted is logged" assertions="12" time="2.362145"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/230_AuditLog/OccupationAuditLogCest.php" name="testOccupationCreatedIsLogged" class="OccupationAuditLogCest" feature="test occupation created is logged" assertions="4" time="2.346603"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/230_AuditLog/OccupationAuditLogCest.php" name="testOccupationUpdatedIsLogged" class="OccupationAuditLogCest" feature="test occupation updated is logged" assertions="4" time="2.358329"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/230_AuditLog/OccupationAuditLogCest.php" name="testOccupationDeletedIsLogged" class="OccupationAuditLogCest" feature="test occupation deleted is logged" assertions="11" time="2.415495"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/230_AuditLog/SettingAuditLogCest.php" name="testSettingUpdatedIsLogged" class="SettingAuditLogCest" feature="test setting updated is logged" assertions="4" time="2.370476"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/230_AuditLog/VisaFeeAuditLogCest.php" name="testVisaFeeCreatedIsLogged" class="VisaFeeAuditLogCest" feature="test visa fee created is logged" assertions="4" time="2.415614"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/230_AuditLog/VisaFeeAuditLogCest.php" name="testVisaFeeUpdatedIsLogged" class="VisaFeeAuditLogCest" feature="test visa fee updated is logged" assertions="4" time="2.379928"/>
+    <testcase file="/app/tests/api_backoffice_gateway/200_VisaOnlineApplicationService/230_AuditLog/VisaFeeAuditLogCest.php" name="testVisaFeeDeletedIsLogged" class="VisaFeeAuditLogCest" feature="test visa fee deleted is logged" assertions="11" time="2.406618"/>
+    <testcase file="/app/tests/api_backoffice_gateway/300_ReportService/MonthlyPaymentReportCest.php" name="testReportUserCanGetAllMonthlyPaymentReport" class="MonthlyPaymentReportCest" feature="test report user can get all monthly payment report" assertions="3" time="3.479161"/>
+    <testcase file="/app/tests/api_backoffice_gateway/300_ReportService/MonthlyPerformanceReportCest.php" name="testReportUserCanGetAllMonthlyPerformanceReport" class="MonthlyPerformanceReportCest" feature="test report user can get all monthly performance report" assertions="3" time="0.384808"/>
+    <testcase file="/app/tests/api_backoffice_gateway/300_ReportService/MonthlyProgressionReportCest.php" name="testReportUserCanGetAllMonthlyProgressionReport" class="MonthlyProgressionReportCest" feature="test report user can get all monthly progression report" assertions="3" time="0.418854"/>
+    <testcase file="/app/tests/api_backoffice_gateway/300_ReportService/MonthlySubmissionReportCest.php" name="testReportUserCanGetAllMonthlySubmissionReport" class="MonthlySubmissionReportCest" feature="test report user can get all monthly submission report" assertions="3" time="0.443258"/>
+    <testcase file="/app/tests/api_backoffice_gateway/400_AuthenticationAndAuthorization/410_UserManagement/ManageBackOfficeUsersCest.php" name="testAdminCanCreateVisaOfficer" class="ManageBackOfficeUsersCest" feature="test admin can create visa officer" assertions="3" time="0.662911"/>
+    <testcase file="/app/tests/api_backoffice_gateway/400_AuthenticationAndAuthorization/410_UserManagement/ManageBackOfficeUsersCest.php" name="testAdminCanDeleteVisaOfficer" class="ManageBackOfficeUsersCest" feature="test admin can delete visa officer" assertions="3" time="0.480903"/>
+    <testcase file="/app/tests/api_backoffice_gateway/400_AuthenticationAndAuthorization/410_UserManagement/ManageBackOfficeUsersCest.php" name="testNotFoundIsReturnedWhenDeletingAUserWhichDoesNotExist" class="ManageBackOfficeUsersCest" feature="test not found is returned when deleting a user which does not exist" assertions="2" time="0.368472"/>
+    <testcase file="/app/tests/api_backoffice_gateway/400_AuthenticationAndAuthorization/410_UserManagement/ManageBackOfficeUsersCest.php" name="testUaaOffersEndpointToGetCurrentBackendUser" class="ManageBackOfficeUsersCest" feature="test uaa offers endpoint to get current backend user" assertions="3" time="0.404843"/>
+    <testcase file="/app/tests/api_backoffice_gateway/400_AuthenticationAndAuthorization/410_UserManagement/ManageBackOfficeUsersCest.php" name="testUaaOffersEndpointToGetABackendUser" class="ManageBackOfficeUsersCest" feature="test uaa offers endpoint to get a backend user" assertions="3" time="0.353304"/>
+    <testcase file="/app/tests/api_backoffice_gateway/400_AuthenticationAndAuthorization/410_UserManagement/ManageBackOfficeUsersCest.php" name="testAdminCanUpdateBackendUser" class="ManageBackOfficeUsersCest" feature="test admin can update backend user" assertions="3" time="0.527887"/>
+    <testcase file="/app/tests/api_backoffice_gateway/400_AuthenticationAndAuthorization/410_UserManagement/ManageBackOfficeUsersCest.php" name="testAdminCanCreateAdminUser" class="ManageBackOfficeUsersCest" feature="test admin can create admin user" assertions="3" time="0.564716"/>
+    <testcase file="/app/tests/api_backoffice_gateway/400_AuthenticationAndAuthorization/410_UserManagement/ManageBackOfficeUsersCest.php" name="testUaaAllowsUsersToHaveMultipleRoles" class="ManageBackOfficeUsersCest" feature="test uaa allows users to have multiple roles" assertions="3" time="0.510659"/>
+    <testcase file="/app/tests/api_backoffice_gateway/400_AuthenticationAndAuthorization/420_Permissions/AssignPermissionsCest.php" name="testUaaProvidesCorrectPermissionsToUsersUponCreationAndInLoginToken" class="AssignPermissionsCest" feature="test uaa provides correct permissions to users upon creation and in login token" assertions="7" time="0.821440"/>
+    <testcase file="/app/tests/api_backoffice_gateway/400_AuthenticationAndAuthorization/430_JwtContent/CheckJwtContentCest.php" name="testCheckFullNameAndEmailInJwt" class="CheckJwtContentCest" feature="test check full name and email in jwt" assertions="4" time="0.615007"/>
+    <testcase file="/app/tests/api_backoffice_gateway/400_AuthenticationAndAuthorization/440_ResetPassword/ResetPasswordBackOfficerUserCest.php" name="testBackendUserCanRequestResetPasswordWithNonExistingEmailAddress" class="ResetPasswordBackOfficerUserCest" feature="test backend user can request reset password with non existing email address" assertions="4" time="0.043146"/>
+    <testcase file="/app/tests/api_backoffice_gateway/400_AuthenticationAndAuthorization/440_ResetPassword/ResetPasswordBackOfficerUserCest.php" name="testBackendUserCanRequestResetPasswordSuccessFully" class="ResetPasswordBackOfficerUserCest" feature="test backend user can request reset password success fully" assertions="4" time="0.564142"/>
+    <testcase file="/app/tests/api_backoffice_gateway/400_AuthenticationAndAuthorization/440_ResetPassword/ResetPasswordBackOfficerUserCest.php" name="testBackendUserCannotResetPasswordDueToInvalidKey" class="ResetPasswordBackOfficerUserCest" feature="test backend user cannot reset password due to invalid key" assertions="4" time="0.571719"/>
+    <testcase file="/app/tests/api_backoffice_gateway/400_AuthenticationAndAuthorization/440_ResetPassword/ResetPasswordBackOfficerUserCest.php" name="testBackendUserResetPasswordSuccessfully" class="ResetPasswordBackOfficerUserCest" feature="test backend user reset password successfully" assertions="7" time="1.402715"/>
+    <testcase file="/app/tests/api_backoffice_gateway/400_AuthenticationAndAuthorization/450_Login/BackendUserLoginCest.php" name="testUserLoginSuccess" class="BackendUserLoginCest" feature="test user login success" assertions="2" time="0.305978"/>
+    <testcase file="/app/tests/api_backoffice_gateway/400_AuthenticationAndAuthorization/450_Login/BackendUserLoginCest.php" name="testUserLoginErrorUserDoesNotExist" class="BackendUserLoginCest" feature="test user login error user does not exist" assertions="4" time="0.439328"/>
+    <testcase file="/app/tests/api_backoffice_gateway/400_AuthenticationAndAuthorization/450_Login/BackendUserLoginCest.php" name="testUserLoginErrorPasswordInvalid" class="BackendUserLoginCest" feature="test user login error password invalid" assertions="4" time="0.294014"/>
+  </testsuite>
+  <testsuite name="api_vev" tests="20" assertions="56" errors="0" failures="0" skipped="2" time="14.598616">
+    <testcase file="/app/tests/api_vev/100_IssuedVisa/CommentIssuedVisaCest.php" name="testImmigrationOfficerCanCommentOnIssuedVisa" class="CommentIssuedVisaCest" feature="test immigration officer can comment on issued visa" assertions="3" time="3.317215"/>
+    <testcase file="/app/tests/api_vev/100_IssuedVisa/ListenIssuedVisaEventCest.php" name="testIssuedVisaIsRecordedInVevDatabase" class="ListenIssuedVisaEventCest" feature="test issued visa is recorded in vev database" assertions="4" time="3.535758"/>
+    <testcase file="/app/tests/api_vev/100_IssuedVisa/ReadIssuedVisaCest.php" name="testImmigrationOfficerCanCountIssuedVisas" class="ReadIssuedVisaCest" feature="test immigration officer can count issued visas" assertions="3" time="0.776096"/>
+    <testcase file="/app/tests/api_vev/100_IssuedVisa/ReadIssuedVisaCest.php" name="testImmigrationOfficerCanGetAllIssuedVisas" class="ReadIssuedVisaCest" feature="test immigration officer can get all issued visas" assertions="3" time="0.748636"/>
+    <testcase file="/app/tests/api_vev/100_IssuedVisa/ReadIssuedVisaCest.php" name="testImmigrationOfficerCanGetAnIssuedVisa" class="ReadIssuedVisaCest" feature="test immigration officer can get an issued visa" assertions="3" time="0.475138"/>
+    <testcase file="/app/tests/api_vev/110_RejectionReason/VevRejectionReasonCest.php" name="testAdminCanCreateRejectionReasonInVev" class="VevRejectionReasonCest" feature="test admin can create rejection reason in vev" assertions="3" time="0.463883"/>
+    <testcase file="/app/tests/api_vev/110_RejectionReason/VevRejectionReasonCest.php" name="testAdminCanUpdateRejectionReasonInVev" class="VevRejectionReasonCest" feature="test admin can update rejection reason in vev" assertions="3" time="0.405196"/>
+    <testcase file="/app/tests/api_vev/110_RejectionReason/VevRejectionReasonCest.php" name="testAdminCanDeleteRejectionReasonInVev" class="VevRejectionReasonCest" feature="test admin can delete rejection reason in vev" assertions="4" time="0.437596"/>
+    <testcase file="/app/tests/api_vev/110_RejectionReason/VevRejectionReasonCest.php" name="testAdminCanCountRejectionReasonInVev" class="VevRejectionReasonCest" feature="test admin can count rejection reason in vev" assertions="3" time="0.412234"/>
+    <testcase file="/app/tests/api_vev/110_RejectionReason/VevRejectionReasonCest.php" name="testAdminCanGetARejectionReasonInVev" class="VevRejectionReasonCest" feature="test admin can get a rejection reason in vev" assertions="3" time="0.408445"/>
+    <testcase file="/app/tests/api_vev/110_RejectionReason/VevRejectionReasonCest.php" name="testAdminCanGetAllRejectionReasonsInVev" class="VevRejectionReasonCest" feature="test admin can get all rejection reasons in vev" assertions="3" time="0.406607"/>
+    <testcase file="/app/tests/api_vev/120_SearchIssuedVisa/SearchIssuedVisaCest.php" name="testImmigrationOfficerCanSearchIssuedVisaByPassportNumber" class="SearchIssuedVisaCest" feature="test immigration officer can search issued visa by passport number" assertions="3" time="0.757664"/>
+    <testcase file="/app/tests/api_vev/120_SearchIssuedVisa/SearchIssuedVisaCest.php" name="testImmigrationOfficerCanSearchIssuedVisaByShortCode" class="SearchIssuedVisaCest" feature="test immigration officer can search issued visa by short code" assertions="3" time="0.368312"/>
+    <testcase file="/app/tests/api_vev/120_SearchIssuedVisa/SearchIssuedVisaCest.php" name="testImmigrationOfficerCanSearchIssuedVisaByQrCode" class="SearchIssuedVisaCest" feature="test immigration officer can search issued visa by qr code" assertions="3" time="0.362764"/>
+    <testcase file="/app/tests/api_vev/120_SearchIssuedVisa/SearchIssuedVisaCest.php" name="testASearchForIssuedVisaIsRecordedInDatabase" class="SearchIssuedVisaCest" feature="test a search for issued visa is recorded in database" assertions="3" time="0.375138"/>
+    <testcase file="/app/tests/api_vev/130_TravelerEntry/ProcessTravelerEntryCest.php" name="testImmigrationOfficerCanApproveTravelerEntry" class="ProcessTravelerEntryCest" feature="test immigration officer can approve traveler entry" assertions="3" time="0.502140"/>
+    <testcase file="/app/tests/api_vev/130_TravelerEntry/ProcessTravelerEntryCest.php" name="testImmigrationOfficerCanRejectTravelerEntry" class="ProcessTravelerEntryCest" feature="test immigration officer can reject traveler entry" assertions="3" time="0.393029"/>
+    <testcase file="/app/tests/api_vev/130_TravelerEntry/ProcessTravelerEntryCest.php" name="testApprovedEntryCreatesRecordInDatabase" class="ProcessTravelerEntryCest" feature="test approved entry creates record in database" assertions="3" time="0.452765"/>
+    <testcase file="/app/tests/api_vev/130_TravelerEntry/ProcessTravelerEntryCest.php" name="testRevokedVisaCannotBeApproved" class="ProcessTravelerEntryCest" feature="test revoked visa cannot be approved" assertions="0" time="0.000000">
+      <skipped/>
+    </testcase>
+    <testcase file="/app/tests/api_vev/130_TravelerEntry/ProcessTravelerEntryCest.php" name="testRevokedVisaCanOnlyBeRejected" class="ProcessTravelerEntryCest" feature="test revoked visa can only be rejected" assertions="0" time="0.000000">
+      <skipped/>
+    </testcase>
+  </testsuite>
+  <testsuite name="bom" tests="47" assertions="222" errors="0" failures="1" skipped="5" time="572.970958">
+    <testcase file="/app/tests/bom/100_Login/AdminLoginCest.php" name="testAdminCanLoginSuccessfully" class="AdminLoginCest" feature="test admin can login successfully" assertions="1" time="7.204803"/>
+    <testcase file="/app/tests/bom/100_Login/ApplicantCannotLoginCest.php" name="testApplicantCannotLoginToBom" class="ApplicantCannotLoginCest" feature="test applicant cannot login to bom" assertions="2" time="6.177575"/>
+    <testcase file="/app/tests/bom/100_Login/VisaOfficerLoginCest.php" name="testVisaOfficerCanLoginSuccessfully" class="VisaOfficerLoginCest" feature="test visa officer can login successfully" assertions="1" time="4.912116"/>
+    <testcase file="/app/tests/bom/120_VisaProcessing/ProcessVisaApplicationCest.php" name="testVisaOfficerCanProcessVisa" class="Bom\ProcessVisaApplicationCest" feature="test visa officer can process visa" assertions="10" time="13.223238"/>
+    <testcase file="/app/tests/bom/120_VisaProcessing/ProcessVisaApplicationCest.php" name="testVisaOfficerCanApproveVisaApplication" class="Bom\ProcessVisaApplicationCest" feature="test visa officer can approve visa application" assertions="4" time="12.331478"/>
+    <testcase file="/app/tests/bom/120_VisaProcessing/ProcessVisaApplicationCest.php" name="testVisaOfficerCanRejectVisaApplication" class="Bom\ProcessVisaApplicationCest" feature="test visa officer can reject visa application" assertions="4" time="15.326202"/>
+    <testcase file="/app/tests/bom/120_VisaProcessing/ProcessVisaApplicationCest.php" name="testVisaOfficerCanRequestFeedbackFromApplicant" class="Bom\ProcessVisaApplicationCest" feature="test visa officer can request feedback from applicant" assertions="4" time="12.300500"/>
+    <testcase file="/app/tests/bom/120_VisaProcessing/ProcessVisaApplicationCest.php" name="testVisaOfficerCanCommentMultipleTimesOnAVisaApplication" class="Bom\ProcessVisaApplicationCest" feature="test visa officer can comment multiple times on a visa application" assertions="4" time="12.691152"/>
+    <testcase file="/app/tests/bom/120_VisaProcessing/ProcessVisaApplicationCest.php" name="testVisaOfficerCanRequestFeedbackFromApplicantMultipleTimes" class="Bom\ProcessVisaApplicationCest" feature="test visa officer can request feedback from applicant multiple times" assertions="6" time="16.556925"/>
+    <testcase file="/app/tests/bom/120_VisaProcessing/ProcessVisaApplicationCest.php" name="testAdminCannotSeeAnApplicantInTheUserManagementResulsetToBom" class="Bom\ProcessVisaApplicationCest" feature="test admin cannot see an applicant in the user management resulset to bom" assertions="2" time="8.603900"/>
+    <testcase file="/app/tests/bom/120_VisaProcessing/ProperStatusLabelCest.php" name="testBomUserCanSeeProperStatusLabel" class="Bom\ProperStatusLabelCest" feature="test bom user can see proper status label" assertions="6" time="12.236331"/>
+    <testcase file="/app/tests/bom/120_VisaProcessing/ReadVisaApplicationsCest.php" name="testVisaOfficerCanViewVisaApplicationList" class="Bom\ReadVisaApplicationsCest" feature="test visa officer can view visa application list" assertions="9" time="9.665312"/>
+    <testcase file="/app/tests/bom/120_VisaProcessing/ReadVisaApplicationsCest.php" name="testVisaOfficerCanReadVisaApplicationDetails" class="Bom\ReadVisaApplicationsCest" feature="test visa officer can read visa application details" assertions="8" time="10.928696"/>
+    <testcase file="/app/tests/bom/120_VisaProcessing/ReadVisaApplicationsCest.php" name="testVisaOfficerCanFilterVisaApplicationById" class="Bom\ReadVisaApplicationsCest" feature="test visa officer can filter visa application by id" assertions="4" time="14.498208"/>
+    <testcase file="/app/tests/bom/120_VisaProcessing/ReadVisaApplicationsCest.php" name="testVisaOfficerCannotDeleteAVisaApplication" class="Bom\ReadVisaApplicationsCest" feature="test visa officer cannot delete a visa application" assertions="2" time="9.189848"/>
+    <testcase file="/app/tests/bom/130_SystemConfiguration/DocumentsTypeManagementCest.php" name="testAdminCanSeeDocumentTypesList" class="DocumentsTypeManagementCest" feature="test admin can see document types list" assertions="6" time="9.720255"/>
+    <testcase file="/app/tests/bom/130_SystemConfiguration/DocumentsTypeManagementCest.php" name="testAdminCanDeleteDocumentType" class="DocumentsTypeManagementCest" feature="test admin can delete document type" assertions="6" time="10.585008"/>
+    <testcase file="/app/tests/bom/130_SystemConfiguration/DocumentsTypeManagementCest.php" name="testAdminCanCreateDocumentType" class="DocumentsTypeManagementCest" feature="test admin can create document type" assertions="4" time="15.487820"/>
+    <testcase file="/app/tests/bom/130_SystemConfiguration/DocumentsTypeManagementCest.php" name="testAdminCanEditDocumentType" class="DocumentsTypeManagementCest" feature="test admin can edit document type" assertions="4" time="13.634960"/>
+    <testcase file="/app/tests/bom/130_SystemConfiguration/SettingsManagementCest.php" name="testAdminCanViewSettings" class="SettingsManagementCest" feature="test admin can view settings" assertions="10" time="9.757866"/>
+    <testcase file="/app/tests/bom/130_SystemConfiguration/SettingsManagementCest.php" name="testAdminCanEditSetting" class="SettingsManagementCest" feature="test admin can edit setting" assertions="6" time="10.774250"/>
+    <testcase file="/app/tests/bom/130_SystemConfiguration/VisaPurposesManagementCest.php" name="testAdminCanViewVisaPurposesList" class="VisaPurposesManagementCest" feature="test admin can view visa purposes list" assertions="11" time="8.958253"/>
+    <testcase file="/app/tests/bom/130_SystemConfiguration/VisaPurposesManagementCest.php" name="testAdminCanSeeVisaPurposesDetails" class="VisaPurposesManagementCest" feature="test admin can see visa purposes details" assertions="0" time="0.000000">
+      <skipped/>
+    </testcase>
+    <testcase file="/app/tests/bom/130_SystemConfiguration/VisaPurposesManagementCest.php" name="testAdminCanDeleteVisaPurpose" class="VisaPurposesManagementCest" feature="test admin can delete visa purpose" assertions="4" time="11.212047"/>
+    <testcase file="/app/tests/bom/130_SystemConfiguration/VisaPurposesManagementCest.php" name="testAdminCanCreateVisaPurpose" class="VisaPurposesManagementCest" feature="test admin can create visa purpose" assertions="10" time="16.218397"/>
+    <testcase file="/app/tests/bom/130_SystemConfiguration/VisaPurposesManagementCest.php" name="testAdminCanEditVisaPurpose" class="VisaPurposesManagementCest" feature="test admin can edit visa purpose" assertions="3" time="12.301354"/>
+    <testcase file="/app/tests/bom/130_SystemConfiguration/VisaTypesManagementCest.php" name="testAdminCanViewVisaTypesList" class="VisaTypesManagementCest" feature="test admin can view visa types list" assertions="4" time="7.097312"/>
+    <testcase file="/app/tests/bom/130_SystemConfiguration/VisaTypesManagementCest.php" name="testAdminCanSeeVisaTypeDetails" class="VisaTypesManagementCest" feature="test admin can see visa type details" assertions="1" time="6.180876"/>
+    <testcase file="/app/tests/bom/130_SystemConfiguration/VisaTypesManagementCest.php" name="testAdminCanDeleteVisaType" class="VisaTypesManagementCest" feature="test admin can delete visa type" assertions="3" time="10.348256"/>
+    <testcase file="/app/tests/bom/130_SystemConfiguration/VisaTypesManagementCest.php" name="testAdminCanCreateVisaTypes" class="VisaTypesManagementCest" feature="test admin can create visa types" assertions="5" time="14.767795"/>
+    <testcase file="/app/tests/bom/130_SystemConfiguration/VisaTypesManagementCest.php" name="testAdminCanEditVisaTypes" class="VisaTypesManagementCest" feature="test admin can edit visa types" assertions="5" time="17.020790"/>
+    <testcase file="/app/tests/bom/140_UsersManagement/CreateUserCest.php" name="testAdminCanCreateVisaOfficer" class="Bom\CreateUserCest" feature="test admin can create visa officer" assertions="5" time="24.925172"/>
+    <testcase file="/app/tests/bom/140_UsersManagement/CreateUserCest.php" name="testAdminCanCreateAReportUser" class="Bom\CreateUserCest" feature="test admin can create a report user" assertions="5" time="25.927315"/>
+    <testcase file="/app/tests/bom/140_UsersManagement/CreateUserCest.php" name="testAdminCanCreateAdminUser" class="Bom\CreateUserCest" feature="test admin can create admin user" assertions="5" time="24.892904"/>
+    <testcase file="/app/tests/bom/140_UsersManagement/DeleteUsersCest.php" name="testAdminCanDeleteUser" class="DeleteUsersCest" feature="test admin can delete user" assertions="6" time="20.259051"/>
+    <testcase file="/app/tests/bom/140_UsersManagement/EditUserCest.php" name="testAdminCanEditBackendUsersPassword" class="Bom\EditUserCest" feature="test admin can edit backend users password" assertions="3" time="26.333184"/>
+    <testcase file="/app/tests/bom/140_UsersManagement/EditUserCest.php" name="testAdminCanEditBackendUsersUsernameAndEmail" class="Bom\EditUserCest" feature="test admin can edit backend users username and email" assertions="3" time="19.537539"/>
+    <testcase file="/app/tests/bom/140_UsersManagement/EditUserCest.php" name="testAdminCanEditBackendUserInformation" class="Bom\EditUserCest" feature="test admin can edit backend user information" assertions="7" time="16.846922">
+      <failure type="PHPUnit\Framework\ExpectationFailedException">EditUserCest: Test admin can edit backend user information
+Failed testing for '1993/11/12' in dob's value: '1993-11-12'
+Failed asserting that an array contains '1993/11/12'.
+
+/app/tests/_support/_generated/BomTesterActions.php:1086
+/app/tests/bom/140_UsersManagement/EditUserCest.php:113
+</failure>
+    </testcase>
+    <testcase file="/app/tests/bom/150_change_language/ChangeUiLanguageCest.php" name="testBomUserCanChangeLanguageToFr" class="Bom\ChangeUiLanguageCest" feature="test bom user can change language to fr" assertions="18" time="16.854092"/>
+    <testcase file="/app/tests/bom/150_change_language/ChangeUiLanguageCest.php" name="testBomUserCanChangeLanguageToEn" class="Bom\ChangeUiLanguageCest" feature="test bom user can change language to en" assertions="15" time="17.777627"/>
+    <testcase file="/app/tests/bom/160_Permissions/PermissionsCheckCest.php" name="testVisaOfficerCannotCreateVisaType" class="PermissionsCheckCest" feature="test visa officer cannot create visa type" assertions="2" time="15.021501"/>
+    <testcase file="/app/tests/bom/160_Permissions/PermissionsCheckCest.php" name="testVisaOfficerCannotCreateVisaPurpose" class="PermissionsCheckCest" feature="test visa officer cannot create visa purpose" assertions="2" time="13.366076"/>
+    <testcase file="/app/tests/bom/160_Permissions/PermissionsCheckCest.php" name="testVisaOfficerCannotCreateDocumentType" class="PermissionsCheckCest" feature="test visa officer cannot create document type" assertions="2" time="11.318051"/>
     <testcase file="/app/tests/bom/170_ReportService/AccessReportServiceCest.php" name="testReportUserCanAccessAndDownloadSubmissionReport" class="AccessReportServiceCest" feature="test report user can access and download submission report" assertions="0" time="0.000000">
       <skipped/>
     </testcase>
-    <testcase file="/app/tests/bom/170_ReportService/AccessReportServiceCest.php" name="testReportUserCanAccessAndDownloadPerformanceReport" class="AccessReportServiceCest" feature="test report user can access and download performance report" assertions="0" time="0.000038"/>
+    <testcase file="/app/tests/bom/170_ReportService/AccessReportServiceCest.php" name="testReportUserCanAccessAndDownloadPerformanceReport" class="AccessReportServiceCest" feature="test report user can access and download performance report" assertions="0" time="0.000000">
+      <skipped/>
+    </testcase>
     <testcase file="/app/tests/bom/170_ReportService/AccessReportServiceCest.php" name="testReportUserCanAccessAndDownloadPaymentReport" class="AccessReportServiceCest" feature="test report user can access and download payment report" assertions="0" time="0.000000">
       <skipped/>
     </testcase>
-    <testcase file="/app/tests/bom/170_ReportService/AccessReportServiceCest.php" name="testReportUserCanAccessAndDownloadProgressionReport" class="AccessReportServiceCest" feature="test report user can access and download progression report" assertions="1" time="0.006918">
-      <failure type="PHPUnit\Framework\ExpectationFailedException">AccessReportServiceCest: Test report user can access and download progression report
-Failed asserting that 2 matches expected 1.
+    <testcase file="/app/tests/bom/170_ReportService/AccessReportServiceCest.php" name="testReportUserCanAccessAndDownloadProgressionReport" class="AccessReportServiceCest" feature="test report user can access and download progression report" assertions="0" time="0.000000">
+      <skipped/>
+    </testcase>
+  </testsuite>
+  <testsuite name="waf" tests="40" assertions="313" errors="0" failures="6" skipped="0" time="1199.004845">
+    <testcase file="/app/tests/waf/100_ChangeLanguage/ChangeLanguageCest.php" name="testApplicantCanChangeApplicationLanguage" class="ChangeLanguageCest" feature="test applicant can change application language" assertions="2" time="9.923047"/>
+    <testcase file="/app/tests/waf/100_ChangeLanguage/ChangeLanguageCest.php" name="testApplicantLanguageGermanIsPersistedInDatabase" class="ChangeLanguageCest" feature="test applicant language german is persisted in database" assertions="3" time="19.996951"/>
+    <testcase file="/app/tests/waf/100_ChangeLanguage/ChangeLanguageCest.php" name="testApplicantLanguageEnglishIsPersistedInDatabase" class="ChangeLanguageCest" feature="test applicant language english is persisted in database" assertions="3" time="20.659292"/>
+    <testcase file="/app/tests/waf/100_ChangeLanguage/ChangeLanguageCest.php" name="testApplicantLanguageFrenchIsPersistedInDatabase" class="ChangeLanguageCest" feature="test applicant language french is persisted in database" assertions="3" time="20.537037"/>
+    <testcase file="/app/tests/waf/ForgotPasswordRequest/ForgotPasswordRequestCest.php" name="asApplicantICanRequestAPasswordReset" class="waf\ForgotPasswordRequestCest" feature="as applicant i can request a password reset" assertions="4" time="13.032152"/>
+    <testcase file="/app/tests/waf/VisaApplication/GoToVisaApplicationsListCest.php" name="testApplicantCanGoBackToListOfApplicationsByClickingOnBackToApplicationsButton" class="GoToVisaApplicationsListCest" feature="test applicant can go back to list of applications by clicking on back to applications button" assertions="3" time="9.001537"/>
+    <testcase file="/app/tests/waf/VisaApplication/LoginCest.php" name="asApplicantICanLoginToVisaServiceSuccessfully" class="LoginCest" feature="as applicant i can login to visa service successfully" assertions="1" time="6.994618"/>
+    <testcase file="/app/tests/waf/VisaApplication/LoginCest.php" name="asApplicantICanLoginToVisaServiceSuccessfullyByProvidingMyEmailAddress" class="LoginCest" feature="as applicant i can login to visa service successfully by providing my email address" assertions="1" time="7.126746"/>
+    <testcase file="/app/tests/waf/VisaApplication/LoginCest.php" name="testAnyBomUserCannotLoginToWaf" class="LoginCest" feature="test any bom user cannot login to waf" assertions="1" time="6.714018"/>
+    <testcase file="/app/tests/waf/VisaApplication/ReadVisaApplicationsCest.php" name="testApplicantSeeCorrectVisaApplicationIdInTheApplicationList" class="ReadVisaApplicationsCest" feature="test applicant see correct visa application id in the application list" assertions="15" time="68.040991"/>
+    <testcase file="/app/tests/waf/VisaApplication/RegistrationCest.php" name="asApplicantICanSignUpForVisaServiceSuccessfully" class="waf\RegistrationCest" feature="as applicant i can sign up for visa service successfully" assertions="2" time="6.208900"/>
+    <testcase file="/app/tests/waf/VisaApplication/RespondToVisaApplicationCommentCest.php" name="testApplicantCanRespondToHisVisaApplicationComment" class="RespondToVisaApplicationCommentCest" feature="test applicant can respond to his visa application comment" assertions="11" time="13.026025"/>
+    <testcase file="/app/tests/waf/VisaApplication/SeeProperStatusOfApplicationsCest.php" name="testApplicantCanSeeInCreationStatusOfAnApplication" class="SeeProperStatusOfApplicationsCest" feature="test applicant can see in creation status of an application" assertions="5" time="21.570193"/>
+    <testcase file="/app/tests/waf/VisaApplication/SeeProperStatusOfApplicationsCest.php" name="testApplicantCanSeeInProcessingStatusOfAnApplication" class="SeeProperStatusOfApplicationsCest" feature="test applicant can see in processing status of an application" assertions="13" time="68.970905"/>
+    <testcase file="/app/tests/waf/VisaApplicationCreation/CreatePartiallyVisaApplicationCest.php" name="testApplicantCanOnlyFillVisaAndPersonalDetailsAndContinueLater" class="CreatePartiallyVisaApplicationCest" feature="test applicant can only fill visa and personal details and continue later" assertions="20" time="48.028196"/>
+    <testcase file="/app/tests/waf/VisaApplicationCreation/CreatePartiallyVisaApplicationCest.php" name="testApplicantCanOnlyFillVisaAndPersonalAndPassportDetailsAndContinueLater" class="CreatePartiallyVisaApplicationCest" feature="test applicant can only fill visa and personal and passport details and continue later" assertions="34" time="62.891476"/>
+    <testcase file="/app/tests/waf/VisaApplicationCreation/CreatePartiallyVisaApplicationCest.php" name="testFieldsValidation" class="CreatePartiallyVisaApplicationCest" feature="test fields validation" assertions="6" time="18.056113">
+      <failure type="PHPUnit\Framework\ExpectationFailedException">CreatePartiallyVisaApplicationCest: Test fields validation
+Failed asserting that  on page /#/application
+--&gt; Application Form
+Personal Details
+Surname *
+Your Last name cannot be empty and should not contain invalid characters
+First/Given Names *
+Your First name cannot be empty and should not contain invalid characters
+Date of Birth *
+Please enter a correct Date of Birth
+Gender *
+Male
+Female
+Your ge
+[Content too long to display. See complete response in '/app/tests/_output/' directory]
+--&gt; contains "Please enter correct Date of Birth in yyyy-mm-dd format".
 
-/app/tests/_support/_generated/BomTesterActions.php:42
-/app/tests/bom/170_ReportService/AccessReportServiceCest.php:27
-      </failure>
+/app/tests/_support/_generated/WafTesterActions.php:360
+/app/tests/waf/VisaApplicationCreation/CreatePartiallyVisaApplicationCest.php:121
+</failure>
+    </testcase>
+    <testcase file="/app/tests/waf/VisaApplicationCreation/CreateVisaApplicationCest.php" name="testApplicantCanCreateVisaApplication" class="CreateVisaApplicationCest" feature="test applicant can create visa application" assertions="11" time="60.869096"/>
+    <testcase file="/app/tests/waf/VisaApplicationCreation/CreateVisaApplicationCest.php" name="testApplicantCanCannotCompleteVisaApplicationWithoutProvidingNecessaryDocuments" class="CreateVisaApplicationCest" feature="test applicant can cannot complete visa application without providing necessary documents" assertions="8" time="54.396258"/>
+    <testcase file="/app/tests/waf/VisaApplicationCreation/CreateVisaApplicationCest.php" name="testApplicantCannotCreateVisaApplicationBecauseTheNationalityIsBlankInTheFirstScreen" class="CreateVisaApplicationCest" feature="test applicant cannot create visa application because the nationality is blank in the first screen" assertions="3" time="13.508377"/>
+    <testcase file="/app/tests/waf/VisaApplicationCreation/CreateVisaApplicationCest.php" name="testApplicantCannotCreateVisaApplicationBecauseTheVisaTypeIsBlankInTheFirstScreen" class="CreateVisaApplicationCest" feature="test applicant cannot create visa application because the visa type is blank in the first screen" assertions="3" time="13.423326"/>
+    <testcase file="/app/tests/waf/VisaApplicationCreation/CreateVisaApplicationCest.php" name="testApplicantCannotCreateVisaApplicationBecauseTheVisaPurposeIsBlankInTheFirstScreen" class="CreateVisaApplicationCest" feature="test applicant cannot create visa application because the visa purpose is blank in the first screen" assertions="3" time="13.284983"/>
+    <testcase file="/app/tests/waf/VisaApplicationCreation/CreateVisaApplicationCest.php" name="testApplicantCannotCreateACompleteVisaApplicationBecauseSomePersonalDetailsAreMissing" class="CreateVisaApplicationCest" feature="test applicant cannot create a complete visa application because some personal details are missing" assertions="19" time="43.504128"/>
+    <testcase file="/app/tests/waf/VisaApplicationCreation/CreateVisaApplicationCest.php" name="testApplicantCannotCreateACompleteVisaApplicationBecauseSomePassportDetailsAreMissing" class="CreateVisaApplicationCest" feature="test applicant cannot create a complete visa application because some passport details are missing" assertions="25" time="57.103446"/>
+    <testcase file="/app/tests/waf/VisaApplicationCreation/CreateVisaApplicationCest.php" name="testApplicantCannotCreateACompleteVisaApplicationBecauseSomeContactDetailsAreMissing" class="CreateVisaApplicationCest" feature="test applicant cannot create a complete visa application because some contact details are missing" assertions="19" time="64.964327"/>
+    <testcase file="/app/tests/waf/VisaApplicationCreation/CreateVisaApplicationCest.php" name="testApplicantCanSeeTheFeeThatHeHasToPayBeforeProceedingToThePaymentPage" class="CreateVisaApplicationCest" feature="test applicant can see the fee that he has to pay before proceeding to the payment page" assertions="13" time="56.461554"/>
+    <testcase file="/app/tests/waf/VisaApplicationCreation/CreateVisaApplicationCest.php" name="testApplicantCannotSeeDeclarationIfHeDidNotProvideAllRequestedDocuments" class="CreateVisaApplicationCest" feature="test applicant cannot see declaration if he did not provide all requested documents" assertions="10" time="53.554926"/>
+    <testcase file="/app/tests/waf/VisaApplicationCreation/CreateVisaApplicationCest.php" name="testApplicantCanSeeThePaymentTermsInOrderToObtainAVisa" class="CreateVisaApplicationCest" feature="test applicant can see the payment terms in order to obtain a visa" assertions="10" time="56.428679"/>
+    <testcase file="/app/tests/waf/VisaApplicationCreation/CreateVisaApplicationCest.php" name="testAsApplicantINeedToDeclareAboutDataCorrectnessAndAcceptTermsAndConditionsToSubmitMyApplication" class="CreateVisaApplicationCest" feature="test as applicant i need to declare about data correctness and accept terms and conditions to submit my application" assertions="12" time="63.131466"/>
+    <testcase file="/app/tests/waf/VisaApplicationCreation/CreateVisaApplicationCest.php" name="testApplicantCanSeeProperIdAndSubmissionDateAfterSubmittingAnApplication" class="CreateVisaApplicationCest" feature="test applicant can see proper id and submission date after submitting an application" assertions="16" time="67.332467"/>
+    <testcase file="/app/tests/waf/VisaApplicationCreation/EditVisaApplicationCest.php" name="testApplicantCannotEditSubmittedVisaApplication" class="EditVisaApplicationCest" feature="test applicant cannot edit submitted visa application" assertions="3" time="7.470156"/>
+    <testcase file="/app/tests/waf/VisaApplicationCreation/EditVisaApplicationCest.php" name="testApplicantCannotEditReadyForProcessingVisaApplication" class="EditVisaApplicationCest" feature="test applicant cannot edit ready for processing visa application" assertions="3" time="7.210895"/>
+    <testcase file="/app/tests/waf/VisaApplicationCreation/EditVisaApplicationCest.php" name="testApplicantCannotEditAwaitingForApplicantFeedbackVisaApplication" class="EditVisaApplicationCest" feature="test applicant cannot edit awaiting for applicant feedback visa application" assertions="3" time="6.978657"/>
+    <testcase file="/app/tests/waf/VisaApplicationCreation/FillingFormDataCest.php" name="testApplicantCanEnterZeroNumberOfChildren" class="FillingFormDataCest" feature="test applicant can enter zero number of children" assertions="6" time="34.101046"/>
+    <testcase file="/app/tests/waf/VisaApplicationCreation/FillingFormDataCest.php" name="testApplicantCanEnterCityOfBirthWithUpperCaseLetters" class="FillingFormDataCest" feature="test applicant can enter city of birth with upper case letters" assertions="6" time="33.728612"/>
+    <testcase file="/app/tests/waf/VisaApplicationCreation/FillingFormDataCest.php" name="testApplicantCannotEnterDateOfBirthGreaterThanCurrentDate" class="FillingFormDataCest" feature="test applicant cannot enter date of birth greater than current date" assertions="2" time="9.173041">
+      <failure type="PHPUnit\Framework\ExpectationFailedException">FillingFormDataCest: Test applicant cannot enter date of birth greater than current date
+Failed asserting that  on page /#/applications
+--&gt; Online Visa Services
+NEW APPLICATION
+My Applications
+Application Id Applicant Full Name Status Submission Date Actions
+string Akongnwi Devert In Creation 2018-11-12 00:00:00
+RESUME
+Terms &amp; Conditions
+Privacy Policy
+� 2018 eVisa-Ministry of Security
+--&gt; contains "Visa Details".
+
+/app/tests/_support/_generated/WafTesterActions.php:360
+/app/tests/_support/Step/Waf/VisaApplicationFillingSteps.php:9
+/app/tests/waf/VisaApplicationCreation/FillingFormDataCest.php:76
+</failure>
+    </testcase>
+    <testcase file="/app/tests/waf/VisaApplicationCreation/FillingFormDataCest.php" name="testApplicantCanEnterMoreThanTenChildren" class="FillingFormDataCest" feature="test applicant can enter more than ten children" assertions="5" time="33.489027">
+      <failure type="PHPUnit\Framework\ExpectationFailedException">FillingFormDataCest: Test applicant can enter more than ten children
+Failed asserting that  on page /#/application
+--&gt; Application Form
+Personal Details
+Surname *
+First/Given Names *
+Date of Birth *
+Gender *
+Male
+Female
+Country of Birth *
+Burkina Faso
+City of Birth *
+Relantionship Status *
+Single
+Occupation *
+Tester
+Number of Children *
+Please enter a valid number of children between 0 and 99
+BACK
+
+[Content too long to display. See complete response in '/app/tests/_output/' directory]
+--&gt; does not contain "Please enter a valid number of children between 0 and 99".
+
+/app/tests/_support/_generated/WafTesterActions.php:433
+/app/tests/waf/VisaApplicationCreation/FillingFormDataCest.php:110
+</failure>
+    </testcase>
+    <testcase file="/app/tests/waf/VisaApplicationCreation/FillingFormDataCest.php" name="testApplicantCannotEnterDateOfEntryDateLessThanCurrentDate" class="FillingFormDataCest" feature="test applicant cannot enter date of entry date less than current date" assertions="2" time="9.564747">
+      <failure type="PHPUnit\Framework\ExpectationFailedException">FillingFormDataCest: Test applicant cannot enter date of entry date less than current date
+Failed asserting that  on page /#/applications
+--&gt; Online Visa Services
+NEW APPLICATION
+My Applications
+Application Id Applicant Full Name Status Submission Date Actions
+string Akongnwi Devert In Creation 2018-11-12 00:00:00
+RESUME
+Terms &amp; Conditions
+Privacy Policy
+� 2018 eVisa-Ministry of Security
+--&gt; contains "Visa Details".
+
+/app/tests/_support/_generated/WafTesterActions.php:360
+/app/tests/_support/Step/Waf/VisaApplicationFillingSteps.php:9
+/app/tests/waf/VisaApplicationCreation/FillingFormDataCest.php:127
+</failure>
+    </testcase>
+    <testcase file="/app/tests/waf/VisaApplicationCreation/FillingFormDataCest.php" name="testApplicantCannotEnterPassportDateOfIssueGreaterThanCurrentDate" class="FillingFormDataCest" feature="test applicant cannot enter passport date of issue greater than current date" assertions="2" time="9.226386">
+      <failure type="PHPUnit\Framework\ExpectationFailedException">FillingFormDataCest: Test applicant cannot enter passport date of issue greater than current date
+Failed asserting that  on page /#/applications
+--&gt; Online Visa Services
+NEW APPLICATION
+My Applications
+Application Id Applicant Full Name Status Submission Date Actions
+string Akongnwi Devert In Creation 2018-11-12 00:00:00
+RESUME
+Terms &amp; Conditions
+Privacy Policy
+� 2018 eVisa-Ministry of Security
+--&gt; contains "Visa Details".
+
+/app/tests/_support/_generated/WafTesterActions.php:360
+/app/tests/_support/Step/Waf/VisaApplicationFillingSteps.php:9
+/app/tests/waf/VisaApplicationCreation/FillingFormDataCest.php:153
+</failure>
+    </testcase>
+    <testcase file="/app/tests/waf/VisaApplicationCreation/FillingFormDataCest.php" name="testApplicantCannotEnterPassportExpiryDateLessThanCurrentDate" class="FillingFormDataCest" feature="test applicant cannot enter passport expiry date less than current date" assertions="2" time="9.321047">
+      <failure type="PHPUnit\Framework\ExpectationFailedException">FillingFormDataCest: Test applicant cannot enter passport expiry date less than current date
+Failed asserting that  on page /#/applications
+--&gt; Online Visa Services
+NEW APPLICATION
+My Applications
+Application Id Applicant Full Name Status Submission Date Actions
+string Akongnwi Devert In Creation 2018-11-12 00:00:00
+RESUME
+Terms &amp; Conditions
+Privacy Policy
+� 2018 eVisa-Ministry of Security
+--&gt; contains "Visa Details".
+
+/app/tests/_support/_generated/WafTesterActions.php:360
+/app/tests/_support/Step/Waf/VisaApplicationFillingSteps.php:9
+/app/tests/waf/VisaApplicationCreation/FillingFormDataCest.php:179
+</failure>
     </testcase>
   </testsuite>
 </testsuites>

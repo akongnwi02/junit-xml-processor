@@ -12,6 +12,12 @@ use Devert\GoogleClient;
 
 class GoogleSheet
 {
+    private $google_credentials;
+
+    public function __construct($google_credentials)
+    {
+        $this->google_credentials = $google_credentials;
+    }
 
     const RUNS_NUMBER_FILED = '!D2';
     const DATA_RANGES = '!A3:';
@@ -40,7 +46,6 @@ class GoogleSheet
         string $currentRange
     ) : \Google_Service_Sheets_BatchUpdateValuesResponse
     {
-
         $currentValues = ($this->get($spreadsheetId, $currentRange))->getValues();
         $googleSheetValuesRequest = new  \Google_Service_Sheets_BatchUpdateValuesRequest();
         $googleSheetValuesRequest->setValueInputOption($valueInputOption);
@@ -75,7 +80,7 @@ class GoogleSheet
      */
     public function getService() : \Google_Service_Sheets
     {
-        return new \Google_Service_Sheets((new GoogleClient())->getClient());
+        return new \Google_Service_Sheets((new GoogleClient($this->google_credentials))->getClient());
     }
 
     /**
@@ -138,11 +143,9 @@ class GoogleSheet
         string $range,
         string $dimension,
         int $runNumber,
-        array $currentValues
+        array $currentValues = null
     ) : array
     {
-        $presentSheetHeading = array_shift($currentValues);
-        $sheetHeading = array_merge($presentSheetHeading, (array)('Run ' . ($runNumber+1)));
 
         foreach ($suite as $test) {
             $values[] = array(
@@ -155,18 +158,46 @@ class GoogleSheet
             );
         }
 
-        foreach ($values as $value) {
-            foreach ($currentValues as $currentValue) {
-                if (in_array($value[4], $currentValue)) {
-                    $item = array_merge($currentValue, (array)$value['5']);
-                    continue;
+        if ($currentValues == null) {
+            $sheetHeading = array(
+                'Component',
+                'Test Scenario',
+                'Category',
+                'Sub category',
+                'Signature',
+                'Run 1'
+            );
+            array_unshift($values, $sheetHeading);
+            $newValues = $values;
+        }
+        else {
+            $presentSheetHeading = array_shift($currentValues);
+            $sheetHeading = array_merge($presentSheetHeading, (array)('Run ' . ($runNumber + 1)));
+
+
+            foreach ($values as $value) {
+                foreach ($currentValues as $currentValue) {
+                    $found = 0;
+                    // if the signature of a test is found in the other tests
+                    // meaning same test, merge the current status
+                    if (in_array($value[4], $currentValue)) {
+                        $item = array_merge($currentValue, (array)$value['5']);
+                        $found = 1;
+                        break;
+                    }
+                }
+                if ($found == 0) {
+                    $status = array_pop($value);
+                    $value[count($value) + $runNumber] = $status;
+                    $newValues[] =  $this->sanitize($value);
+                }
+                else if($found ==1) {
+                    $newValues[] = @$item ?: $this->sanitize($value);
                 }
             }
-            $status = array_pop($value);
-            $value[count($value)+$runNumber] = $status;
-            $newValues[] = @$item ?:  $this->sanitize($value);
+            array_unshift($newValues, $sheetHeading);
         }
-        array_unshift($newValues, $sheetHeading);
+
         $data = array(
             'range' => $range,
             'majorDimension' => $dimension,
@@ -187,7 +218,6 @@ class GoogleSheet
             $numRuns = $this->getRunNumbers($spreadsheetId, $component.self::RUNS_NUMBER_FILED);
             $currentRange = $component . self::DATA_RANGES.($this->getUpperBound($numRuns));
             $range = $component . self::DATA_RANGES.($this->getUpperBound($numRuns));
-
             $this->update(
                 $spreadsheetId,
                 $range,
@@ -207,6 +237,10 @@ class GoogleSheet
         }
     }
 
+    /**
+     * @param int $runNumber
+     * @return string
+     */
     public function getUpperBound(int $runNumber) : string
     {
         $upperBound ='F';
@@ -217,6 +251,10 @@ class GoogleSheet
         return $upperBound;
     }
 
+    /**
+     * @param array $arr
+     * @return array
+     */
     public function sanitize(array $arr) : array
     {
         for ($i = 0; $i < count($arr); ++$i) {
@@ -224,6 +262,7 @@ class GoogleSheet
                 $arr[$i] = '';
             }
         }
+        ksort($arr);
         return $arr;
     }
 }
