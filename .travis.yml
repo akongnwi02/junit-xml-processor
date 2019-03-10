@@ -16,6 +16,12 @@ cache:
         - $HOME/.composer/cache
         - vendor
 
-before_install: phpenv config-rm xdebug.ini
-
 install: composer install
+
+script:
+  - vendor/bin/phpunit
+
+notifications:
+    email: false
+
+
