@@ -2,6 +2,7 @@
     "name": "devert/phpunit-reporter",
     "description": "This is a package to process xml report of junit or phpunit test executions and display the result on a google spreadsheet",
     "type": "library",
+    "licence": "MIT",
     "keywords": [
         "phpunit",
         "junit",
