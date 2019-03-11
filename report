@@ -17,7 +17,7 @@ if(!file_exists($config_file)) {
     throw new Exception('File not found: '.$config_file);
 }
 
-$config = json_decode(file_get_contents($config_file));
+$config = json_decode(file_get_contents($config_fileg));
 
 if (!property_exists($config, 'spreadsheetId')) {
     throw new Exception('dpreadsheetId not set in configuration file');
