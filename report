@@ -38,9 +38,7 @@ if (!property_exists($config, 'xml')) {
     throw new Exception('xml file path not set in configuration file');
 }
 
-if (isset($config->token_path)) {
-    $token_path = @$config->token_path?:null;
-}
+$token_path = @$config->token_path?:null;
 
 $junitXmlPath = $config->xml;
 $spreadsheetId = $config->spreadsheetId;
@@ -66,7 +64,7 @@ if (($junit_xml_data = file_get_contents($junitXmlPath))===false){
     }
 }
 $googleSheet = new \Devert\Util\GoogleSheet($google_credentials, $token_path);
-die;
+
 $googleSheet->updateSpreadSheet($spreadsheetId, $testcases);
 
 
