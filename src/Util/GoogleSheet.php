@@ -14,9 +14,12 @@ class GoogleSheet
 {
     private $google_credentials;
 
-    public function __construct($google_credentials)
+    private $token_path;
+
+    public function __construct($google_credentials, $token_path)
     {
         $this->google_credentials = $google_credentials;
+        $this->token_path = $token_path;
     }
 
     const RUNS_NUMBER_FILED = '!D2';
@@ -80,7 +83,7 @@ class GoogleSheet
      */
     public function getService() : \Google_Service_Sheets
     {
-        return new \Google_Service_Sheets((new GoogleClient($this->google_credentials))->getClient());
+        return new \Google_Service_Sheets((new GoogleClient($this->google_credentials, $this->token_path))->getClient());
     }
 
     /**

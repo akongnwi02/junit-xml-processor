@@ -15,9 +15,13 @@ use Google_Service_Sheets;
 class GoogleClient
 {
     private $google_credentials;
-    public function __construct($google_credentials)
+
+    private $token_path;
+
+    public function __construct($google_credentials, $token_path=null)
     {
         $this->google_credentials = $google_credentials;
+        $this->token_path = $token_path;
     }
 
     /**
@@ -39,7 +43,7 @@ class GoogleClient
         // The file token.json stores the user's access and refresh tokens, and is
         // created automatically when the authorization flow completes for the first
         // time.
-        $tokenPath = 'token.json';
+        $tokenPath = $this->token_path;
         if (file_exists($tokenPath)) {
             $accessToken = json_decode(file_get_contents($tokenPath), true);
             $client->setAccessToken($accessToken);
