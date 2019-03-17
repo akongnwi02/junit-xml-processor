@@ -3,5 +3,4 @@ composer.phar
 .phpunit.result.cache
 .report.xml
 .idea
-token.json
 
