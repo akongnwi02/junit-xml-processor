@@ -3,4 +3,6 @@ composer.phar
 .phpunit.result.cache
 .report.xml
 .idea
+google_credentials.json
+google_token.json
 

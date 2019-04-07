@@ -18,7 +18,7 @@ class GoogleSheetTest extends TestCase
      * @var GoogleSheet
      */
     protected $googleSheet;
-    public function setUp() : void
+    public function setUp()
     {
         $this->googleSheet = new GoogleSheet('fake-credentials');
     }
