@@ -14,7 +14,7 @@ class TestFormatterTest extends TestCase
 {
     public $attributes;
 
-    public function setUp() : void
+    public function setUp()
     {
         $this->attributes = array(
             'testsuite' => array(

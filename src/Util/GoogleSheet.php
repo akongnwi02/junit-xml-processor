@@ -16,7 +16,7 @@ class GoogleSheet
 
     private $token_path;
 
-    public function __construct($google_credentials, $token_path)
+    public function __construct($google_credentials, $token_path = null)
     {
         $this->google_credentials = $google_credentials;
         $this->token_path = $token_path;

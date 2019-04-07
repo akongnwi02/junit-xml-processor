@@ -11,7 +11,7 @@ class CollectionXml extends \PHPUnit\Framework\TestCase
     /** @test string */
     protected $testXml;
 
-    public function setUp() : void
+    public function setUp()
     {
         $this->testArray = [
             'carrier' => 'fedex',

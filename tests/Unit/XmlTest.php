@@ -18,7 +18,7 @@ class XmlTest extends \PHPUnit\Framework\TestCase
      */
     protected $xml;
 
-    public function setUp(): void
+    public function setUp()
     {
         $this->path = '/app/tests/api_vev/110_RejectionReason/VevRejectionReasonCest.php';
         $this->xml = new TestFormatter();
